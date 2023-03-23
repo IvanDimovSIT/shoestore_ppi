@@ -1,0 +1,77 @@
+.NavBar{
+    position: fixed;/*fixed, sticky, relative ???*/
+    top: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    background-color: #e0e0e0;
+    color: #000000;
+    display: flex;
+
+    padding: 0%;
+    align-items: center;
+    height: 56px;
+    font: 500 20px/32px Roboto, "Helvetica Neue", sans-serif;
+
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: none;
+    list-style: none;
+
+    z-index: 9999;
+}
+
+.NavBar ul {
+    position: inherit;/*fixed, sticky*/
+    top: inherit;
+    left: inherit;
+    right: inherit;
+
+    width: inherit;
+    background-color: inherit;
+    color: inherit;
+    display: inherit;
+    padding: inherit;
+    align-items: inherit;
+    height: inherit;
+    font: inherit;
+
+    flex-wrap: inherit;
+    justify-content: inherit;
+    margin: inherit;
+    list-style: inherit;
+}
+  
+.NavBar li{
+    padding: 1%;
+    transition: 200ms;
+    color: black;
+}
+
+.NavBar li:hover{
+    background-color: black;
+    color: white;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.NavBarCart{
+    position: absolute;
+    left: 95%;
+    float: right;
+    width: 4vw;
+    height: 4vw;
+}
+
+.ItemsInCartNumber{
+    position: absolute;
+    left: 93%;
+    float: right;
+    width: 4vw;
+    height: 4vw;
+}

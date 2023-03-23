@@ -1,0 +1,79 @@
+.ShoeName{
+    font-family: Arial, Helvetica, sans-serif;
+    size: 12 px;
+    font-size: 26px;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.ShoePrice{
+    font-family: Arial, Helvetica, sans-serif;
+    size: 12px;
+    font-size: 24px;
+}
+
+.ShoeFrame{
+    border-radius: 3px;
+    border-style: groove;
+    border-color: black;
+    padding: 0px;
+    resize: none;
+    width: 22vw;
+    height: 40vw;
+}
+
+SshoesList{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    justify-content: center;
+    margin: auto;
+}
+
+.ShoesItem{
+    margin: auto;
+    padding: 0.5%;
+    list-style: none;
+    /*flex: 0 0 33.333333%;*/
+    display: inline;
+    float: left;
+}
+
+.ShoeImage{
+    width: 20vw;
+    height: 20vw;
+    object-fit: scale-down;
+    background-size: cover;
+    align-self: center;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.BuyButton{
+    position: relative;
+    right: 5%;
+    float: right;
+    width: 5vw;
+    height: 3vw;
+
+    border: 1px;
+    border-radius: 1px;
+    border-style: groove;
+
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.BuyButton:hover{
+    background-color: black;
+    color: white;
+}
+
+.BuyButton:active{
+    background-color: lightgrey;
+    color: black;
+}
