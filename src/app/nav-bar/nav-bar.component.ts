@@ -11,6 +11,7 @@ import {
   transition,
   // ...
 } from '@angular/animations'; // animations
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -19,6 +20,10 @@ import {
 })
 export class NavBarComponent {
   
+  public constructor(private cookieService: CookieService){
+      ShoppingCart.setSessionStorage();
+  }
+
   public getCartItemsCount():number{
     return ShoppingCart.getTotalItemCount();
   }

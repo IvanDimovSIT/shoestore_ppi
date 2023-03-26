@@ -20,7 +20,8 @@ export class ShoesListComponent {
   }
 
   public addToCart(id:number){
-    ShoppingCart.addById(id);
+    //temporary
+    ShoppingCart.addById(id, "38");
   }
 
 }
