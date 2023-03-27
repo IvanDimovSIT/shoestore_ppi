@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ShoeItem } from 'src/models/ShoeItem';
 import { ShoeItemData } from 'src/models/ShoeItemData';
 import { ShoppingCart } from 'src/models/ShoppingCart';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-shoes-list',
@@ -10,8 +11,10 @@ import { ShoppingCart } from 'src/models/ShoppingCart';
 })
 export class ShoesListComponent {
   public displayedShoes:ReadonlyMap<number, ShoeItem>|null = null;
+  private routerConnection:Router;
 
-  constructor(){
+  constructor(private router: Router) { 
+    this.routerConnection = router;
     this.loadAll();
   }
 
@@ -22,6 +25,10 @@ export class ShoesListComponent {
   public addToCart(id:number){
     //temporary
     ShoppingCart.addById(id, "38");
+  }
+
+  buyShoe(id: number) {
+    this.routerConnection.navigate(['/shoe-page', id]);
   }
 
 }

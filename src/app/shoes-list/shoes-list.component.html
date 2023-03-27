@@ -4,8 +4,9 @@
             <tr><td><img class="ShoeImage" src= "{{i.getPicturePath()}}" ></td></tr>
             <tr><td class="ShoeName"><p>{{i.getName()}}</p></td></tr>
             <tr><td class="ShoePrice"> <p> ${{i.getPrice()}} 
-            <button class="BuyButton" (click)="addToCart(i.getId())" >Buy</button>
+            <button class="BuyButton" (click)="buyShoe(i.getId())" >Buy</button>
             </p></td></tr>
         </table>
     </li>
 </ul>
+
