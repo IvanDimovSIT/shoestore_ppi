@@ -4,10 +4,10 @@ import { AppComponent } from './app.component';
 import { ShoePageComponent } from './shoe-page/shoe-page.component';
 import { StoreComponent } from './store/store.component';
 
-// connections between pages
+// Routing between pages
 const routes: Routes = [
   { path: '', redirectTo: '/store', pathMatch: 'full' },
-  { path: 'shoe-page/:id', component: ShoePageComponent },
+  { path: 'shoe-page/:id', component: ShoePageComponent }, //using GET method
   { path: 'store', component: StoreComponent}
 ];
 
