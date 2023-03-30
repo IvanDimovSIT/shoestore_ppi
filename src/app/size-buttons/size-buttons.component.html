@@ -1,0 +1,13 @@
+
+
+<ul class="ButtonsList">
+    <li class="ButtonListItem" *ngFor="let i of getSizes()">
+        <button
+            class="SizeButton"
+            [class.SelectedButton]="i === selectedSize"
+            (click)="onButtonClick(i)">
+            {{i}}
+        </button>
+    </li>
+</ul>
+<button class="BuyButton" (click)="addToCart()">Add to Cart</button>

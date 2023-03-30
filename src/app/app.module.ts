@@ -10,6 +10,7 @@ import { ShoePageComponent } from './shoe-page/shoe-page.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { StoreComponent } from './store/store.component';
+import { SizeButtonsComponent } from './size-buttons/size-buttons.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { StoreComponent } from './store/store.component';
     ShoesListComponent,
     NavBarComponent,
     ShoePageComponent,
-    StoreComponent
+    StoreComponent,
+    SizeButtonsComponent
   ],
   imports: [
     BrowserAnimationsModule,

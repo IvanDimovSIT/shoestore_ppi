@@ -2,7 +2,7 @@
 <head></head>
 <body>
     <app-nav-bar></app-nav-bar>
-    <br><br><br><br><br>
+    <br><br><br>
     <div class="BuyShoe">
         <div class="ShoeImage">
             <img src="{{shoe?.getPicturePath()}}">
@@ -10,9 +10,12 @@
 
         <div class="ShoeDescription">
             <p class="ShoeName">{{shoe?.getName()}}</p>
+            <p class="ShoeGender">{{shoe?.getGenderDescription()}}</p>
+            <p class="ShoePrice">${{shoe?.getPrice()}}</p>
+            <p class="SelectSize">Select Size:</p>
+            <p class="SizeButtons"><app-size-buttons [shoe]="shoe"></app-size-buttons></p>
         </div>
     </div>
 
-    <!--<p>shoe-page works! {{shoe?.getName()}}</p>-->
 </body>
 </html>
