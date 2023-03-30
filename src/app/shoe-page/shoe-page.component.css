@@ -1,0 +1,22 @@
+
+.BuyShoe {
+    display: flex;
+    align-items: flex-start;
+    margin: 3%;
+}
+  
+.ShoeImage {
+    flex-shrink: 0;
+    margin-right: 100px;
+    width: 400px; 
+    height: auto;
+}
+  
+.ShoeDescription {
+    font-size: 34px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: flex-start;
+    font-weight: bold;
+}
+  

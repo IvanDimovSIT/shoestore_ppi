@@ -3,6 +3,16 @@
 <body>
     <app-nav-bar></app-nav-bar>
     <br><br><br><br><br>
-    <p>shoe-page works! {{shoe?.getName()}}</p>
+    <div class="BuyShoe">
+        <div class="ShoeImage">
+            <img src="{{shoe?.getPicturePath()}}">
+        </div>
+
+        <div class="ShoeDescription">
+            <p class="ShoeName">{{shoe?.getName()}}</p>
+        </div>
+    </div>
+
+    <!--<p>shoe-page works! {{shoe?.getName()}}</p>-->
 </body>
 </html>

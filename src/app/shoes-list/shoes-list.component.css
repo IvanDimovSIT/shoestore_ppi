@@ -1,15 +1,24 @@
 .ShoeName{
     font-family: Arial, Helvetica, sans-serif;
     size: 12 px;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: bold;
     overflow: hidden;
+    padding-left: 5px;
 }
 
 .ShoePrice{
     font-family: Arial, Helvetica, sans-serif;
     size: 12px;
-    font-size: 24px;
+    font-size: 22px;
+    padding-left: 5px;
+}
+
+.ShoeGender{
+    font-family: Arial, Helvetica, sans-serif;
+    size: 12px;
+    font-size: 20px;
+    color: grey;
 }
 
 .ShoeFrame{
@@ -18,17 +27,27 @@
     border-color: black;
     padding: 0px;
     resize: none;
-    width: 22vw;
     height: 40vw;
+    width: 300px; 
+    table-layout: fixed; 
+}
+  
+.ShoeFrame td {
+    width: 100%; 
+    overflow: hidden; 
+    white-space: nowrap; 
+    text-overflow: ellipsis; 
+
 }
 
+/*
 SshoesList{
     display: flex;
     flex-wrap: wrap;
     padding-left: 0;
     justify-content: center;
     margin: auto;
-}
+}*/
 
 .ShoesItem{
     margin: auto;
@@ -77,3 +96,4 @@ SshoesList{
     background-color: lightgrey;
     color: black;
 }
+
