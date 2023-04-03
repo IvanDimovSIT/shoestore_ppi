@@ -44,11 +44,11 @@ export class ShoeItem{
         switch(this.gender)
         {
             case "M":
-                return "Men's Shoes";
+                return "Мъжки обувки";
             case "F":
-                return "Women's Shoes";
+                return "Дамски обувки";
             case "K":
-                return "Kids' Shoes";
+                return "Детски обувки";
             default:
                 console.error("Unrecogniesd Shoe gender:",this.gender, " from ", this);
                 return "ERROR";
