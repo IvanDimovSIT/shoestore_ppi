@@ -16,27 +16,27 @@ export class ShoeItem{
         this.sizes = sizes;
     }
 
-    public getId():number{
+    public get Id():number{
         return this.id;
     }
 
-    public getName():string{
+    public get Name():string{
         return this.name;
     }
 
-    public getSizes():string[]{
+    public get Sizes():string[]{
         return this.sizes;
     }
 
-    public getPrice():number{
+    public get Price():number{
         return this.price;
     }
 
-    public getPicturePath():string{
+    public get PicturePath():string{
         return this.picturePath;
     }
 
-    public getGender():string{
+    public get Gender():string{
         return this.gender;
     }
 

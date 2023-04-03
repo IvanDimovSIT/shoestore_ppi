@@ -62,6 +62,7 @@ a{
 
 .NavBarCart{
     position: absolute;
+    bottom: 0%;
     left: 95%;
     float: right;
     width: 4vw;

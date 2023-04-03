@@ -1,0 +1,21 @@
+
+.ItemsInCart, .Checkout {
+    display: inline-block;
+}
+
+.Checkout {
+    width: 35%;
+}
+
+.ItemsInCart {
+    width: 65%;
+}
+
+.PageContents{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+    gap: 5vw;
+}

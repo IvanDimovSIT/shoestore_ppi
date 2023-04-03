@@ -11,6 +11,9 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { StoreComponent } from './store/store.component';
 import { SizeButtonsComponent } from './size-buttons/size-buttons.component';
+import { CartPageComponent } from './cart-page/cart-page.component';
+import { CartItemsListComponent } from './cart-items-list/cart-items-list.component';
+import { CartItemsCheckoutComponent } from './cart-items-checkout/cart-items-checkout.component';
 
 
 @NgModule({
@@ -20,7 +23,10 @@ import { SizeButtonsComponent } from './size-buttons/size-buttons.component';
     NavBarComponent,
     ShoePageComponent,
     StoreComponent,
-    SizeButtonsComponent
+    SizeButtonsComponent,
+    CartPageComponent,
+    CartItemsListComponent,
+    CartItemsCheckoutComponent
   ],
   imports: [
     BrowserAnimationsModule,

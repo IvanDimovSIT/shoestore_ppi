@@ -1,0 +1,21 @@
+
+<ul>
+    <li *ngFor="let i of this.displayedShoes" class="ShoesItem">
+        <div class="ShoePicture">
+            <img src="{{ i.shoeItem.PicturePath }}">
+        </div>
+        <div class="ShoeDescription">
+            <div class="ShoeDescriptionLeft">
+                <p class="ShoeName">{{ i.shoeItem.Name }}</p>
+                <p class="ShoeGender">{{ i.shoeItem.getGenderDescription() }}</p>
+                <p class="ShoeSize">Размер: {{ i.shoeSize }}</p>
+            </div>
+            <div class="ShoeDescriptionRight">
+                <p  class="ShoePrice">{{ i.shoeItem.Price }} лв.</p>
+                <p class="ShoeQunatity">Брой: {{i.count}}</p>
+                <p  class="RemoveButton"><button (click)="removeShoe(i)">Премахни</button></p>
+            </div>
+        </div>
+        <hr class="DividingLine">
+    </li>
+</ul>

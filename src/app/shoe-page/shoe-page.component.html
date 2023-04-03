@@ -5,13 +5,13 @@
     <br><br><br>
     <div class="BuyShoe">
         <div class="ShoeImage">
-            <img src="{{shoe?.getPicturePath()}}">
+            <img src="{{shoe?.PicturePath}}">
         </div>
 
         <div class="ShoeDescription">
-            <p class="ShoeName">{{shoe?.getName()}}</p>
+            <p class="ShoeName">{{shoe?.Name}}</p>
             <p class="ShoeGender">{{shoe?.getGenderDescription()}}</p>
-            <p class="ShoePrice">{{shoe?.getPrice()}}лв.</p>
+            <p class="ShoePrice">{{shoe?.Price}} лв.</p>
             <p class="SelectSize">Изберете размер:</p>
             <p class="SizeButtons"><app-size-buttons [shoe]="shoe"></app-size-buttons></p>
         </div>

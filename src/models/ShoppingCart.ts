@@ -18,7 +18,15 @@ export class ShoppingCart {
         const storageValue = sessionStorage.getItem(this.STORAGE_KEY);
         if (storageValue) {
             try {
-                this.shoeOrderList = JSON.parse(storageValue).map((item: any) => new ShoeOrder(item.shoeItem, item.shoeSize));
+                this.shoeOrderList = JSON.parse(storageValue).map((item: any) => new ShoeOrder(
+                    new ShoeItem(item.shoeItem.id,
+                        item.shoeItem.name,
+                        item.shoeItem.price,
+                        item.shoeItem.picturePath,
+                        item.shoeItem.gender,
+                        item.shoeItem.sizes),
+                    item.shoeSize,
+                    item.count));
             } catch (e) {
                 console.error("Error parsing shopping cart session storage value:", e);
             }
@@ -28,7 +36,21 @@ export class ShoppingCart {
         this.logDebug();
     }
 
-    
+    private static addToCart(shoeOrder: ShoeOrder){
+        let flag: boolean = false;
+        this.shoeOrderList.forEach(i =>{
+            console.log("Adding to cart:", shoeOrder, i);
+            if(shoeOrder.shoeSize === i.shoeSize &&
+                shoeOrder.shoeItem.Id === i.shoeItem.Id){
+                i.count++;
+                flag = true;
+                return;
+            }
+        });
+        if(flag)
+            return;
+        this.shoeOrderList.push(shoeOrder);
+    }
 
     public static addById(itemId: number, shoeSize: string) {
         if (!ShoeItemData.has(itemId)) {
@@ -36,8 +58,8 @@ export class ShoppingCart {
             return;
         }
         const shoeItem = ShoeItemData.getById(itemId);
-        const shoeOrder = new ShoeOrder(shoeItem, shoeSize);
-        this.shoeOrderList.push(shoeOrder);
+        const shoeOrder = new ShoeOrder(shoeItem, shoeSize, 1);
+        this.addToCart(shoeOrder);
         this.saveToStorage();
         this.logDebug();
     }
@@ -47,11 +69,20 @@ export class ShoppingCart {
     }
 
     public static getTotalItemCount(): number {
-        return this.shoeOrderList.length;
+        let count: number = 0;
+        this.shoeOrderList.forEach(i => {
+            count += i.count;
+        });
+        return count;
     }
 
     public static removeAll(){
         this.shoeOrderList = [];
+        this.saveToStorage();
+    }
+
+    public static remove(shoeOrder: ShoeOrder){
+        this.shoeOrderList = this.shoeOrderList.filter(i => !i.Equals(shoeOrder));
         this.saveToStorage();
     }
 

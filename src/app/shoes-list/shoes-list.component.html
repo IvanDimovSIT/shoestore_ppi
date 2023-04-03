@@ -2,11 +2,11 @@
 <ul calss ="ShoesList">
     <li *ngFor="let i of displayedShoes?.values()" class="ShoesItem">
         <table class="ShoeFrame">
-            <tr><td><img class="ShoeImage" src= "{{i.getPicturePath()}}" ></td></tr>
-            <tr><td class="ShoeName"><p>{{i.getName()}}</p></td></tr>
+            <tr><td><img class="ShoeImage" src= "{{i.PicturePath}}" ></td></tr>
+            <tr><td class="ShoeName"><p>{{i.Name}}</p></td></tr>
             <tr><td class="ShoeGender"><p>{{i.getGenderDescription()}}</p></td></tr>
-            <tr><td class="ShoePrice"> <p> ${{i.getPrice()}} 
-            <button class="BuyButton" (click)="buyShoe(i.getId())" >Купи</button>
+            <tr><td class="ShoePrice"> <p> {{i.Price}} лв.
+            <button class="BuyButton" (click)="buyShoe(i.Id)" >Купи</button>
             </p></td></tr>
         </table>
     </li>

@@ -13,7 +13,7 @@ export class SizeButtonsComponent {
   selectedSize: string|null = null;
 
   public getSizes():string[]{
-    return this.shoe!.getSizes();
+    return this.shoe!.Sizes;
   }
 
   public onButtonClick(size:string){
@@ -25,6 +25,6 @@ export class SizeButtonsComponent {
     if(this.selectedSize == null)
       return;
 
-    ShoppingCart.addById(this.shoe!.getId(), this.selectedSize);
+    ShoppingCart.addById(this.shoe!.Id, this.selectedSize);
   }
 }
