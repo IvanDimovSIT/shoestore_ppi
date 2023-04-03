@@ -11,7 +11,7 @@
         <div class="ShoeDescription">
             <p class="ShoeName">{{shoe?.getName()}}</p>
             <p class="ShoeGender">{{shoe?.getGenderDescription()}}</p>
-            <p class="ShoePrice">${{shoe?.getPrice()}}</p>
+            <p class="ShoePrice">{{shoe?.getPrice()}}лв.</p>
             <p class="SelectSize">Изберете размер:</p>
             <p class="SizeButtons"><app-size-buttons [shoe]="shoe"></app-size-buttons></p>
         </div>
