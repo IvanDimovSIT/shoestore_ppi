@@ -82,8 +82,28 @@ export class ShoppingCart {
     }
 
     public static remove(shoeOrder: ShoeOrder){
-        this.shoeOrderList = this.shoeOrderList.filter(i => !i.Equals(shoeOrder));
+        this.shoeOrderList = this.shoeOrderList.filter(i => 
+            !(i.shoeSize === shoeOrder.shoeSize && i.shoeItem.Id === shoeOrder.shoeItem.Id));
         this.saveToStorage();
+    }
+  
+    public static removeQuantity(shoeOrder: ShoeOrder){
+        let flag: boolean = false;
+        this.shoeOrderList.forEach(i => {
+            if(i.shoeSize === shoeOrder.shoeSize && i.shoeItem.Id === shoeOrder.shoeItem.Id){
+               if(i.count <= 1){
+                flag = true;
+               }else{
+                i.count--;
+               } 
+            }
+        });
+
+        if(flag){
+            this.remove(shoeOrder);
+        }else{
+            this.saveToStorage();
+        }
     }
 
 }

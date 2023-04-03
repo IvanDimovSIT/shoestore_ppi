@@ -48,7 +48,23 @@ p{
     color: black;
 }
 
+span button{
+    background-color: darkgrey;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    width: 30px;
+    height: 30px;
+    margin: 3px;
+    border-radius: 50%;
+}
 
+span button:hover{
+    background-color: black;
+}
 
 .ShoePicture img {
     width: 150px;
