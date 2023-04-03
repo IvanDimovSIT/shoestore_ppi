@@ -1,4 +1,22 @@
+
 .TotalCost{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 32px;
+}
+
+.CheckoutButton button{
+    font-family: Arial, sans-serif;
+    border-radius: 50px;
+    width: 300px;
+    height: 60px;
+    font-size: 18px;
+    text-align: center;
+    display: block;
+    background-color: black;
+    color: white;
+    border-color: transparent;
+}
+
+.CheckoutButton button:hover{
+    background-color: rgb(66,66,66);
 }

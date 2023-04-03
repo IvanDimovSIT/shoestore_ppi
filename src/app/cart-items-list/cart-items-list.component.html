@@ -11,7 +11,7 @@
                 <p class="ShoeSize">Размер: {{ i.shoeSize }}</p>
             </div>
             <div class="ShoeDescriptionRight">
-                <p  class="ShoePrice">{{ i.shoeItem.Price }} лв.</p>
+                <p  class="ShoePrice">{{ i.shoeItem.Price*i.count }} лв.</p>
                 <p class="ShoeQunatity">Брой: {{i.count}}</p>
                 <p  class="RemoveButton"><button (click)="removeShoe(i)">Премахни</button></p>
             </div>
