@@ -1,18 +1,40 @@
 
+export enum Genders{
+    M,
+    F,
+    K
+}
+
+export enum Colors{
+    Black,
+    White,
+    Grey,
+    Red,
+    Green,
+    Blue,
+    Orange,
+    Brown,
+    Pink,
+    Yellow,
+    MultiColor
+}
+
 export class ShoeItem{
     private id:number;
     private name:string;
     private price:number;
     private picturePath:string;
-    private gender:string;
+    private gender:Genders;
+    private color:Colors;
     private sizes:string[];
 
-    public constructor(id:number, name:string, price:number, picturePath:string, gender:string, sizes:string[]){
+    public constructor(id:number, name:string, price:number, picturePath:string, gender:Genders, color:Colors, sizes:string[]){
         this.id = id;
         this.name = name;
         this.price = price;
         this.picturePath = picturePath;
         this.gender = gender;
+        this.color = color;
         this.sizes = sizes;
     }
 
@@ -36,18 +58,22 @@ export class ShoeItem{
         return this.picturePath;
     }
 
-    public get Gender():string{
+    public get Gender():Genders{
         return this.gender;
+    }
+
+    public get Color():Colors{
+        return this.color;
     }
 
     public getGenderDescription():string{
         switch(this.gender)
         {
-            case "M":
+            case Genders.M:
                 return "Мъжки обувки";
-            case "F":
+            case Genders.F:
                 return "Дамски обувки";
-            case "K":
+            case Genders.K:
                 return "Детски обувки";
             default:
                 console.error("Unrecogniesd Shoe gender:",this.gender, " from ", this);

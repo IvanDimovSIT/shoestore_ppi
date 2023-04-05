@@ -24,6 +24,7 @@ export class ShoppingCart {
                         item.shoeItem.price,
                         item.shoeItem.picturePath,
                         item.shoeItem.gender,
+                        item.shoeItem.color,
                         item.shoeItem.sizes),
                     item.shoeSize,
                     item.count));
