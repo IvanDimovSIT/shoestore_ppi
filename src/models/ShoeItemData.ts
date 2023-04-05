@@ -25,4 +25,14 @@ export class ShoeItemData{
         return this.shoes;
     }
 
+    public static getByGender(gender: Genders):ReadonlyMap<number, ShoeItem>{
+        let result: Map<number, ShoeItem> = new Map<number, ShoeItem>();
+        this.shoes.forEach((v,k) => {
+            if(v.Gender === gender){
+                result.set(k, v);
+            }
+        });
+        return result;
+    }
+
 }

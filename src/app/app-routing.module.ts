@@ -7,9 +7,9 @@ import { StoreComponent } from './store/store.component';
 
 // Routing between pages
 const routes: Routes = [
-  { path: '', redirectTo: '/store', pathMatch: 'full' },
+  { path: '', redirectTo: '/store/A', pathMatch: 'full' },
   { path: 'shoe-page/:id', component: ShoePageComponent }, //using GET method
-  { path: 'store', component: StoreComponent},
+  { path: 'store/:g', component: StoreComponent},
   { path: 'cart', component: CartPageComponent}
 ];
 
