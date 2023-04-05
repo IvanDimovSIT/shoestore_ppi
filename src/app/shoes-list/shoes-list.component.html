@@ -1,4 +1,4 @@
-
+<div class="ShoesListContainer">
 <ul calss ="ShoesList">
     <li *ngFor="let i of displayedShoes?.values()" class="ShoesItem">
         <table class="ShoeFrame">
@@ -12,3 +12,8 @@
     </li>
 </ul>
 
+<p class="ArrowContainer">
+    <span class="PreviousArrow" (click)="navigateToPage(this.pageNumber-1)">&lt;</span>
+    <span class="NextArrow" (click)="navigateToPage(this.pageNumber+1)">&gt;</span>
+</p>
+</div>

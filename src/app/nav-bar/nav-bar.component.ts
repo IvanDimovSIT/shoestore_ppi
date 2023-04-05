@@ -31,7 +31,7 @@ export class NavBarComponent {
 
   public navigateStore(gender: string){
     console.log("navigating to:", gender);
-    this.router.navigate(['/store', gender], { replaceUrl: true });
+    this.router.navigate(['/store', gender, '1'], { replaceUrl: true });
   }
 
 }

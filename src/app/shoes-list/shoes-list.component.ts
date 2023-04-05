@@ -10,19 +10,26 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./shoes-list.component.css']
 })
 export class ShoesListComponent {
+  private static readonly ITEMS_PER_PAGE: number = 12;
   public displayedShoes:ReadonlyMap<number, ShoeItem>|null = null;
+  public pageNumber:number = 1;
+  public gender:string = 'A';
+  public maxPage:number=1;
 
   constructor(private routerConnection: Router, private activatedRoute: ActivatedRoute) { 
-
     let g:string|null = null;
+    let p:string|null = null;
+
     this.activatedRoute.paramMap.subscribe(params => {
       g = params.get('g');
+      p = params.get('p');
 
       if(g === null || g === 'a'){
         this.loadAll();
         return;
       }
 
+      this.gender = g;
       switch(g){
         case 'M':
         this.loadMen();
@@ -37,7 +44,25 @@ export class ShoesListComponent {
         this.loadAll();
         break;
       }
+      this.maxPage = Math.floor( 1+(this.displayedShoes!.size/ShoesListComponent.ITEMS_PER_PAGE));
 
+      if(p !== null){
+        const page:number = Number.parseInt(p);
+        if(Number.isNaN(page))return;
+        if(page<1)return;
+        
+        if(page>this.maxPage){
+          this.pageNumber = this.maxPage;
+        }else{
+          this.pageNumber = page;
+        }
+      }
+
+      const displayedShoesArray:[number,ShoeItem][] = Array.from(this.displayedShoes!.entries());
+      const startIndex:number = Math.min((this.pageNumber-1)*ShoesListComponent.ITEMS_PER_PAGE, displayedShoesArray.length - 1);
+      const endIndex:number = Math.min(this.pageNumber*ShoesListComponent.ITEMS_PER_PAGE - 1, displayedShoesArray.length - 1);
+      this.displayedShoes = new Map(displayedShoesArray.slice(startIndex, endIndex + 1));
+      
     });
   }
 
@@ -61,8 +86,19 @@ export class ShoesListComponent {
     ShoppingCart.addById(id, "38");
   }
 
-  buyShoe(id: number) {
+  public buyShoe(id: number) {
     this.routerConnection.navigate(['/shoe-page', id]);
+  }
+
+  public navigateToPage(pageNumber: number){
+    if(pageNumber<1)
+      pageNumber = 1;
+    if(pageNumber>this.maxPage)
+      pageNumber = this.maxPage;
+    this.routerConnection.navigate(['/store', this.gender, pageNumber], { replaceUrl: true });
+    if(pageNumber != this.pageNumber){
+      window.scrollTo(0, 0);//go to the top
+    }
   }
 
 }

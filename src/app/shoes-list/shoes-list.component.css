@@ -97,3 +97,26 @@ SshoesList{
     color: black;
 }
 
+
+.ShoesListContainer {
+    display: flex;
+    flex-direction: column;
+}
+  
+.ArrowContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+}
+  
+.PreviousArrow, .NextArrow {
+    cursor: pointer;
+    margin-left: 16px;
+    margin-right: 16px;
+    cursor: pointer;
+    margin: 0 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 44px;
+    font-weight: bold;
+}
+

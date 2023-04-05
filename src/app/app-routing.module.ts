@@ -7,10 +7,11 @@ import { StoreComponent } from './store/store.component';
 
 // Routing between pages
 const routes: Routes = [
-  { path: '', redirectTo: '/store/A', pathMatch: 'full' },
+  { path: '', redirectTo: '/store/A/1', pathMatch: 'full' },
   { path: 'shoe-page/:id', component: ShoePageComponent }, //using GET method
-  { path: 'store/:g', component: StoreComponent},
-  { path: 'cart', component: CartPageComponent}
+  { path: 'store/:g/:p', component: StoreComponent},
+  { path: 'cart', component: CartPageComponent},
+  { path: '**', component: StoreComponent}
 ];
 
 @NgModule({
