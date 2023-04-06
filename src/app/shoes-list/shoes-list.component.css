@@ -120,3 +120,14 @@ SshoesList{
     font-weight: bold;
 }
 
+.PageNumber input {
+    display: block;
+    margin-top: 5px;
+    font-family: sans-serif;
+    font-size: 18px;
+    width: 50px;
+    height: 30px;
+    border-radius: 15px;
+    border: 2px solid black;
+    text-align: center;
+}

@@ -101,4 +101,19 @@ export class ShoesListComponent {
     }
   }
 
+  public convertToPositiveInt(value: EventTarget|null): number {
+    if(value === null)
+      return 0;
+
+    const text:string = (value as HTMLInputElement).value;
+
+    const intValue:number = parseInt(text, 10);
+  
+    if (isNaN(intValue) || intValue < 1) {
+      return 0;
+    }
+  
+    return intValue;
+  }
+
 }

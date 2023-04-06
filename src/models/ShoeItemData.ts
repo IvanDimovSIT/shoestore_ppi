@@ -24,6 +24,12 @@ export class ShoeItemData{
         this.shoes.set(18, new ShoeItem(18,"Air Max Scorpion",1899.99, "../assets/shoe6.png", Genders.K, Colors.White, ["32", "35", "38", "40" , "42", "43", "44", "45", "45.5", "46", "47", "47.5", "48"]));
         this.shoes.set(19, new ShoeItem(19,"Air Max Scorpion",1999.99, "../assets/shoe6.png", Genders.K, Colors.White, ["32", "35", "38", "40" , "42", "43", "44", "45", "45.5", "46", "47", "47.5", "48"]));
         this.shoes.set(20, new ShoeItem(20,"Air Max Scorpion",2099.99, "../assets/shoe6.png", Genders.K, Colors.White, ["32", "35", "38", "40" , "42", "43", "44", "45", "45.5", "46", "47", "47.5", "48"]));
+        this.shoes.set(21, new ShoeItem(21,"Air Max Scorpion",2199.99, "../assets/shoe6.png", Genders.K, Colors.White, ["32", "35", "38", "40" , "42", "43", "44", "45", "45.5", "46", "47", "47.5", "48"]));
+        this.shoes.set(22, new ShoeItem(22,"Air Max Scorpion",2299.99, "../assets/shoe6.png", Genders.K, Colors.White, ["32", "35", "38", "40" , "42", "43", "44", "45", "45.5", "46", "47", "47.5", "48"]));
+        this.shoes.set(23, new ShoeItem(23,"Air Max Scorpion",2399.99, "../assets/shoe6.png", Genders.K, Colors.White, ["32", "35", "38", "40" , "42", "43", "44", "45", "45.5", "46", "47", "47.5", "48"]));
+        this.shoes.set(24, new ShoeItem(24,"Air Max Scorpion",2499.99, "../assets/shoe6.png", Genders.K, Colors.White, ["32", "35", "38", "40" , "42", "43", "44", "45", "45.5", "46", "47", "47.5", "48"]));
+        this.shoes.set(25, new ShoeItem(25,"Air Max Scorpion",2599.99, "../assets/shoe6.png", Genders.K, Colors.White, ["32", "35", "38", "40" , "42", "43", "44", "45", "45.5", "46", "47", "47.5", "48"]));
+        this.shoes.set(26, new ShoeItem(26,"Air Max Scorpion",2699.99, "../assets/shoe6.png", Genders.K, Colors.White, ["32", "35", "38", "40" , "42", "43", "44", "45", "45.5", "46", "47", "47.5", "48"]));
 
         console.log("Initialising:",this.shoes);
     }
