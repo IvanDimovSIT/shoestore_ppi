@@ -9,7 +9,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ShoePageComponent } from './shoe-page/shoe-page.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-import { StoreComponent } from './store/store.component';
+import { StorePageComponent } from './store-page/store-page.component';
 import { SizeButtonsComponent } from './size-buttons/size-buttons.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
 import { CartItemsListComponent } from './cart-items-list/cart-items-list.component';
@@ -23,7 +23,7 @@ import { FooterBarComponent } from './footer-bar/footer-bar.component';
     ShoesListComponent,
     NavBarComponent,
     ShoePageComponent,
-    StoreComponent,
+    StorePageComponent,
     SizeButtonsComponent,
     CartPageComponent,
     CartItemsListComponent,
