@@ -1,0 +1,20 @@
+app-shoes-list{
+    display: block;
+    top: 7vw;
+    position: relative;
+}
+
+img{
+    display: block;
+    top: 5vw;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+
+app-footer-bar{
+  margin-top: auto;
+  bottom: 0;
+  width: 100%;
+}

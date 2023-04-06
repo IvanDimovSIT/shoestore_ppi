@@ -14,6 +14,7 @@ import { SizeButtonsComponent } from './size-buttons/size-buttons.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
 import { CartItemsListComponent } from './cart-items-list/cart-items-list.component';
 import { CartItemsCheckoutComponent } from './cart-items-checkout/cart-items-checkout.component';
+import { FooterBarComponent } from './footer-bar/footer-bar.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { CartItemsCheckoutComponent } from './cart-items-checkout/cart-items-che
     SizeButtonsComponent,
     CartPageComponent,
     CartItemsListComponent,
-    CartItemsCheckoutComponent
+    CartItemsCheckoutComponent,
+    FooterBarComponent
   ],
   imports: [
     BrowserAnimationsModule,
