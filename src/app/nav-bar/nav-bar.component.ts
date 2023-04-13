@@ -21,7 +21,7 @@ import { Router } from '@angular/router';
 })
 export class NavBarComponent {
   
-  public constructor(private cookieService: CookieService, private router: Router){
+  public constructor(private router: Router){
     ShoppingCart.setSessionStorage();
   }
 
