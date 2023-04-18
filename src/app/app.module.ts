@@ -16,6 +16,7 @@ import { CartItemsListComponent } from './cart-items-list/cart-items-list.compon
 import { CartItemsCheckoutComponent } from './cart-items-checkout/cart-items-checkout.component';
 import { FooterBarComponent } from './footer-bar/footer-bar.component';
 import { AboutUsPageComponent } from './about-us-page/about-us-page.component';
+import { FaqPageComponent } from './faq-page/faq-page.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { AboutUsPageComponent } from './about-us-page/about-us-page.component';
     CartItemsListComponent,
     CartItemsCheckoutComponent,
     FooterBarComponent,
-    AboutUsPageComponent
+    AboutUsPageComponent,
+    FaqPageComponent
   ],
   imports: [
     BrowserAnimationsModule,
