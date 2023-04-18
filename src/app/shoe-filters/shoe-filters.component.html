@@ -1,4 +1,5 @@
-<div class="FilterContainer">
+<img src="../../assets/filter.png" class="InactiveFilter" (click)="toggle($event)">
+<div class="FilterContainer" *ngIf="showFilters">
     <div class="PriceFilter">
         <h4>Цена:</h4>
         <p>

@@ -8,10 +8,9 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./shoe-filters.component.css']
 })
 export class ShoeFiltersComponent {
+  public showFilters: boolean = false; 
   public price: string = "A";
   public color: string = "A";
-  //@ViewChild('price') radioGroupPrice!: ElementRef;
-  //@ViewChild('color') radioGroupColor!: ElementRef;
 
   public constructor(private router: Router, private route: ActivatedRoute) {
     const price = this.route.snapshot.paramMap.get('price');
@@ -34,6 +33,19 @@ export class ShoeFiltersComponent {
       price===null?this.route.snapshot.paramMap.get('price'):price,
       color===null?this.route.snapshot.paramMap.get('color'):color],
       { replaceUrl: true });
+  }
+
+  public toggle(event:any){
+    const element = event.target;
+    if (element.classList.contains('InactiveFilter')) {
+      element.classList.remove('InactiveFilter');
+      element.classList.add('ActiveFilter');
+    } else {
+      element.classList.add('InactiveFilter');
+      element.classList.remove('ActiveFilter');
+    }
+
+    this.showFilters = !this.showFilters;
   }
 
 }

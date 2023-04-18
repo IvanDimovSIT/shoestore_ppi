@@ -3,6 +3,22 @@ p, h4{
     font-weight: bolder;
 }
 
+img{
+    width: 30px;
+}
+
+.InactiveFilter{
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 5px;
+    width: 40px;
+}
+
+.ActiveFilter{
+    border: none;
+    width: 30px;
+}
+
 input[type="radio"] {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -29,11 +45,6 @@ input[type="radio"]:hover {
     justify-content: space-between;
     border: 1px solid black;
     padding: 5px; 
-    /* 
-    max-width: 1000px;
-    margin-left: 100px;
-    margin-right: 100px;
-    */
     display: flex;
     justify-content: center;
 }
