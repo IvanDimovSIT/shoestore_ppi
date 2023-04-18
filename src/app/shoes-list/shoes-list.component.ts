@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Genders, ShoeItem } from 'src/models/ShoeItem';
+import { Colors, Genders, ShoeItem } from 'src/models/ShoeItem';
 import { ShoeItemData } from 'src/models/ShoeItemData';
 import { ShoppingCart } from 'src/models/ShoppingCart';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -19,16 +19,29 @@ export class ShoesListComponent {
   constructor(private routerConnection: Router, private activatedRoute: ActivatedRoute) { 
     let g:string|null = null;
     let p:string|null = null;
+    let price:string|null = null;
+    let color:string|null = null;
 
     this.activatedRoute.paramMap.subscribe(params => {
       g = params.get('g');
       p = params.get('p');
+      price = params.get('price');
+      color = params.get('color');
+
+      if(price === null){
+        price = 'A';
+      }
+
+      if(color === null){
+        color = 'A';
+      }
 
       if(g === null || g === 'a'){
         this.loadAll();
         return;
       }
 
+      //Filter
       this.gender = g;
       switch(g){
         case 'M':
@@ -44,6 +57,25 @@ export class ShoesListComponent {
         this.loadAll();
         break;
       }
+
+      switch(price){
+        case '0':
+        this.filterByPrice(0, 50);
+        break;
+        case '50':
+        this.filterByPrice(50, 100);
+        break;
+        case '100':
+        this.filterByPrice(100, 200);
+        break;
+        case '200':
+        this.filterByPrice(200, 9999999);
+        break;
+      }
+
+      this.filterByColor(color);
+
+      //Pages
       this.maxPage = Math.floor( 1+(this.displayedShoes!.size/ShoesListComponent.ITEMS_PER_PAGE));
 
       if(p !== null){
@@ -64,6 +96,23 @@ export class ShoesListComponent {
       this.displayedShoes = new Map(displayedShoesArray.slice(startIndex, endIndex + 1));
       
     });
+  }
+
+  public filterByColor(colorString: string){
+    if(colorString === 'A')
+      return;
+    const color:Colors = Colors[colorString as keyof typeof Colors];
+    if(color === undefined)
+      return;
+
+    const displayedShoesArray:[number,ShoeItem][] = Array.from(this.displayedShoes!.entries());
+    this.displayedShoes = new Map(displayedShoesArray.filter(shoe => shoe[1].Color == color));
+    
+  }
+
+  public filterByPrice(startPrice:number, endPrice: number){
+    const displayedShoesArray:[number,ShoeItem][] = Array.from(this.displayedShoes!.entries());
+    this.displayedShoes = new Map(displayedShoesArray.filter(shoe => shoe[1].Price >= startPrice && shoe[1].Price <= endPrice));
   }
 
   public loadAll(){
@@ -95,7 +144,13 @@ export class ShoesListComponent {
       pageNumber = 1;
     if(pageNumber>this.maxPage)
       pageNumber = this.maxPage;
-    this.routerConnection.navigate(['/store', this.gender, pageNumber], { replaceUrl: true });
+    this.routerConnection.navigate(
+      ['/store',
+      this.gender,
+      pageNumber,
+      this.activatedRoute.snapshot.paramMap.get('price'),
+      this.activatedRoute.snapshot.paramMap.get('color') ],
+      { replaceUrl: true });
     if(pageNumber != this.pageNumber){
       window.scrollTo(0, 0);//go to the top
     }

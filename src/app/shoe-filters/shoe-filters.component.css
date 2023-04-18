@@ -1,0 +1,57 @@
+p, h4{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    outline: none;
+    transition: all 0.3s ease;
+}
+  
+input[type="radio"]:checked {
+    background-color: #000;
+}
+  
+input[type="radio"]:hover {
+    transform: scale(1.2);
+}
+
+.FilterContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid black;
+    padding: 5px; 
+    /* 
+    max-width: 1000px;
+    margin-left: 100px;
+    margin-right: 100px;
+    */
+    display: flex;
+    justify-content: center;
+}
+
+.PriceFilter{
+    width: 30%;
+}
+
+.ColorFilter{
+    width: 70%;
+}
+
+.ColorOptions{
+    display: grid;
+    grid-row-gap: 0;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.ColorOptions p {
+    margin-bottom: 0px;
+}

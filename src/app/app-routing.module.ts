@@ -11,7 +11,7 @@ import { FaqPageComponent } from './faq-page/faq-page.component';
 const routes: Routes = [
   { path: '', redirectTo: '/store/A/1', pathMatch: 'full' },
   { path: 'shoe-page/:id', component: ShoePageComponent }, //using GET method
-  { path: 'store/:g/:p', component: StorePageComponent},
+  { path: 'store/:g/:p/:price/:color', component: StorePageComponent},
   { path: 'cart', component: CartPageComponent},
   { path: 'about-us', component: AboutUsPageComponent},
   { path: 'FAQ', component: FaqPageComponent},

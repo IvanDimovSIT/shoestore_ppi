@@ -4,6 +4,12 @@ app-shoes-list{
     position: relative;
 }
 
+app-shoe-filters{
+  display:block;
+  top: 7vw;
+  position: relative;
+}
+
 img{
     display: block;
     top: 5vw;

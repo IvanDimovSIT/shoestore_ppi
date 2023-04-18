@@ -12,7 +12,7 @@ import {
   // ...
 } from '@angular/animations'; // animations
 import { CookieService } from 'ngx-cookie-service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -21,7 +21,7 @@ import { Router } from '@angular/router';
 })
 export class NavBarComponent {
   
-  public constructor(private router: Router){
+  public constructor(private router: Router, private route: ActivatedRoute){
     ShoppingCart.setSessionStorage();
   }
 
@@ -31,7 +31,11 @@ export class NavBarComponent {
 
   public navigateStore(gender: string){
     console.log("navigating to:", gender);
-    this.router.navigate(['/store', gender, '1'], { replaceUrl: true });
+    this.router.navigate(
+      ['/store', gender, '1', 
+      this.route.snapshot.paramMap.get('price')===null?'A':this.route.snapshot.paramMap.get('price'),
+      this.route.snapshot.paramMap.get('color')===null?'A':this.route.snapshot.paramMap.get('color')],
+      { replaceUrl: true });
   }
 
 }

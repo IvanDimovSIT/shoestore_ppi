@@ -1,0 +1,98 @@
+<div class="FilterContainer">
+    <div class="PriceFilter">
+        <h4>Цена:</h4>
+        <p>
+            <input type="radio" name="price" value="A" [checked]="price==='A'" (change)="filterChange('A', null)">
+            Без филтър
+        </p>
+
+        <p>
+            <input type="radio" name="price" value="0" [checked]="price==='0'" (change)="filterChange('0', null)">
+            0лв - 50лв
+        </p>
+
+        <p>
+            <input type="radio" name="price" value="50" [checked]="price==='50'" (change)="filterChange('50', null)">
+            50лв - 100лв
+        </p>
+
+        
+        <p>
+            <input type="radio" name="price" value="100" [checked]="price==='100'" (change)="filterChange('100', null)">
+            100лв - 200лв
+        </p>
+
+        
+        <p>
+            <input type="radio" name="price" value="200" [checked]="price==='200'" (change)="filterChange('200', null)">
+            200лв +
+        </p>
+    </div>
+
+    <div class="ColorFilter">
+        <h4>Цвят:</h4>
+        <div class="ColorOptions">
+        <p>
+            <input type="radio" name="color" value="A" [checked]="color === 'A'" (change)="filterChange(null, 'A')">
+            Без филтър
+        </p>
+
+        <p>
+            <input type="radio" name="color" value="Black" [checked]="color === 'Black'" (change)="filterChange(null, 'Black')">
+            Черен
+        </p>
+
+        <p style="color: white; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">
+            <input type="radio" name="color" value="White" [checked]="color === 'White'" (change)="filterChange(null, 'White')">
+            Бял
+        </p>
+
+
+        <p style="color: grey;">
+            <input type="radio" name="color" value="Grey" [checked]="color === 'Grey'" (change)="filterChange(null, 'Grey')">
+            Сив
+        </p>
+
+        <p style="color:red">
+            <input type="radio" name="color" value="Red" [checked]="color === 'Red'" (change)="filterChange(null, 'Red')">
+            Червен
+        </p>
+
+        <p style="color: green;">
+            <input type="radio" name="color" value="Green" [checked]="color === 'Green'" (change)="filterChange(null, 'Green')">
+            Зелен
+        </p>
+
+        <p style="color: blue;">
+            <input type="radio" name="color" value="Blue" [checked]="color === 'Blue'" (change)="filterChange(null, 'Blue')">
+            Син
+        </p>
+
+        <p style="color: orange;">
+            <input type="radio" name="color" value="Orange" [checked]="color === 'Orange'" (change)="filterChange(null, 'Orange')">
+            Оранжев
+        </p>
+
+        <p style="color: brown;">
+            <input type="radio" name="color" value="Brown" [checked]="color === 'Brown'" (change)="filterChange(null, 'Brown')">
+            Кафяв
+        </p>
+
+        <p style="color: rgb(207, 88, 108);">
+            <input type="radio" name="color" value="Pink" [checked]="color === 'Pink'" (change)="filterChange(null, 'Pink')">
+            Розов
+        </p>
+
+        <p style="color:rgb(177, 177, 19)">
+            <input type="radio" name="color" value="Yellow" [checked]="color === 'Yellow'" (change)="filterChange(null, 'Yellow')">
+            Жълт
+        </p>
+
+        <p>
+            <input type="radio" name="color" value="MultiColor" [checked]="color === 'MultiColor'" (change)="filterChange(null, 'MultiColor')">
+            Комбиниран
+        </p>
+
+        </div>
+    </div>
+</div>
