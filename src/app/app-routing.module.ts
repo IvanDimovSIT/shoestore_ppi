@@ -9,7 +9,7 @@ import { FaqPageComponent } from './faq-page/faq-page.component';
 
 // Routing between pages
 const routes: Routes = [
-  { path: '', redirectTo: '/store/A/1', pathMatch: 'full' },
+  { path: '', redirectTo: '/store/A/1/A/A', pathMatch: 'full' },
   { path: 'shoe-page/:id', component: ShoePageComponent }, //using GET method
   { path: 'store/:g/:p/:price/:color', component: StorePageComponent},
   { path: 'cart', component: CartPageComponent},
