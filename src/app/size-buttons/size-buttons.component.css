@@ -50,3 +50,7 @@
 .BuyButton:hover{
     background-color: rgb(66,66,66);
 }
+
+button{
+    cursor: pointer;
+}

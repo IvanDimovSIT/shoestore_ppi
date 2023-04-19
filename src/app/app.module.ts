@@ -18,6 +18,7 @@ import { FooterBarComponent } from './footer-bar/footer-bar.component';
 import { AboutUsPageComponent } from './about-us-page/about-us-page.component';
 import { FaqPageComponent } from './faq-page/faq-page.component';
 import { ShoeFiltersComponent } from './shoe-filters/shoe-filters.component';
+import { ContactsPageComponent } from './contacts-page/contacts-page.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { ShoeFiltersComponent } from './shoe-filters/shoe-filters.component';
     FooterBarComponent,
     AboutUsPageComponent,
     FaqPageComponent,
-    ShoeFiltersComponent
+    ShoeFiltersComponent,
+    ContactsPageComponent
   ],
   imports: [
     BrowserAnimationsModule,

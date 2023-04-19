@@ -15,6 +15,7 @@
     background-color: black;
     color: white;
     border-color: transparent;
+    cursor: pointer;
 }
 
 .CheckoutButton button:hover{

@@ -1,0 +1,42 @@
+.ContactsContainer{
+    padding-top: 50px;
+    margin-top: 50px;
+    margin: 2vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Logo{
+    width: 300px;
+    padding-bottom: 40px;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+}
+
+.SocialMedia img {
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.PhoneAndEmail img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    position: relative;
+    top: 8px;
+}
+
+.PhoneAndEmail {
+    padding-left: 2%;
+}
+
+.Email {
+    margin-bottom: 0;
+}

@@ -19,4 +19,8 @@ export class ShoePageComponent {
     });
   }
 
+  public ngAfterViewInit() {
+    window.scrollTo(0, 0);
+  }
+
 }

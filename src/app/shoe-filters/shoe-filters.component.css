@@ -5,6 +5,7 @@ p, h4{
 
 img{
     width: 30px;
+    cursor: pointer;
 }
 
 .InactiveFilter{
@@ -29,6 +30,7 @@ input[type="radio"] {
     border: 2px solid #000;
     outline: none;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
   
 input[type="radio"]:checked {

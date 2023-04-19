@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./about-us-page.component.css']
 })
 export class AboutUsPageComponent {
-  ngAfterViewInit() {
+  public ngAfterViewInit() {
     window.scrollTo(0, 0);
   }
 }

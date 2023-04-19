@@ -6,6 +6,7 @@ import { ShoePageComponent } from './shoe-page/shoe-page.component';
 import { StorePageComponent } from './store-page/store-page.component';
 import { AboutUsPageComponent } from './about-us-page/about-us-page.component';
 import { FaqPageComponent } from './faq-page/faq-page.component';
+import { ContactsPageComponent } from './contacts-page/contacts-page.component';
 
 // Routing between pages
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'cart', component: CartPageComponent},
   { path: 'about-us', component: AboutUsPageComponent},
   { path: 'FAQ', component: FaqPageComponent},
+  { path: 'contacts', component: ContactsPageComponent},
   { path: '**', component: StorePageComponent}
 ];
 

@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./faq-page.component.css']
 })
 export class FaqPageComponent {
-  ngAfterViewInit() {
+  public ngAfterViewInit() {
     window.scrollTo(0, 0);
   }
 }
