@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { ShoeItem } from 'src/models/ShoeItem';
-import { ShoeOrder } from 'src/models/ShoeOrder';
-import { ShoppingCart } from 'src/models/ShoppingCart';
+import { ShoeItem } from 'src/model/ShoeItem';
+import { ShoeOrder } from 'src/model/ShoeOrder';
+import { ShoppingCart } from 'src/model/ShoppingCart';
 
 @Component({
   selector: 'app-cart-items-list',

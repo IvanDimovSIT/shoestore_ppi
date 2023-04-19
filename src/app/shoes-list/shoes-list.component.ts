@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { Colors, Genders, ShoeItem } from 'src/models/ShoeItem';
-import { ShoeItemData } from 'src/models/ShoeItemData';
-import { ShoppingCart } from 'src/models/ShoppingCart';
+import { Colors, Genders, ShoeItem } from 'src/model/ShoeItem';
+import { ShoeItemData } from 'src/model/ShoeItemData';
+import { ShoppingCart } from 'src/model/ShoppingCart';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({

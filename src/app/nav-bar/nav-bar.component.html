@@ -1,10 +1,10 @@
 <div class="NavBar">
     <ul>
-        <li (click)="navigateStore('A')"><a>Нови</a></li>
+        <li (click)="navigateStore('A')"><a>Всички</a></li>
         <li (click)="navigateStore('M')"><a>Мъже</a></li>
         <li (click)="navigateStore('F')"><a>Жени</a></li>
         <li (click)="navigateStore('K')"><a>Деца</a></li>
-        <li><a href="google.com">Намаления</a></li>
+        <li (click)="navigateStore('A')"><a>Намаления</a></li>
     </ul>
     <p class="ItemsInCartNumber">
         {{getCartItemsCount()}}

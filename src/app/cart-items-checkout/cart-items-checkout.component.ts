@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ShoppingCart } from 'src/models/ShoppingCart';
+import { ShoppingCart } from 'src/model/ShoppingCart';
 
 @Component({
   selector: 'app-cart-items-checkout',

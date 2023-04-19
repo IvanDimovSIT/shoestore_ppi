@@ -1,7 +1,7 @@
 
-import { ShoeItem } from 'src/models/ShoeItem';
-import { ShoeItemData } from 'src/models/ShoeItemData';
-import { ShoppingCart } from 'src/models/ShoppingCart';
+import { ShoeItem } from 'src/model/ShoeItem';
+import { ShoeItemData } from 'src/model/ShoeItemData';
+import { ShoppingCart } from 'src/model/ShoppingCart';
 import { Component, HostBinding } from '@angular/core';
 import {
   trigger,

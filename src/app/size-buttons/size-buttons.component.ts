@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { ShoeItem } from 'src/models/ShoeItem';
-import { ShoppingCart } from 'src/models/ShoppingCart';
+import { ShoeItem } from 'src/model/ShoeItem';
+import { ShoppingCart } from 'src/model/ShoppingCart';
 import { ShoePageComponent } from '../shoe-page/shoe-page.component';
 
 @Component({
