@@ -1,0 +1,28 @@
+<div class="DeliveryInfo">
+    <p class="Title"> Данни за доставка </p>
+    <input placeholder="Адрес" class="InputBox">
+    <input placeholder="Град" class="InputBox">
+    <input placeholder="Пощенски код" class="InputBox">
+    <input placeholder="Държава" class="InputBox">
+    <p class="Title"> Куриер </p>
+    <p>
+        <input type="radio" name="courier" value="Econt" checked (click)="selectCourier('Econt')">
+        Еконт (5лв)
+    </p>
+    <p>
+        <input type="radio" name="courier" value="Speedy" (click)="selectCourier('Speedy')">
+        Speedy (10лв)
+    </p>
+</div>
+<div class="ContactInfo">
+    <p class="Title"> Данни за контакт </p>
+    <input placeholder="Име" class="InputBox">
+    <input placeholder="Фамилия" class="InputBox">
+    <input placeholder="Телефон" class="InputBox">
+    <input placeholder="Е-мейл" class="InputBox">
+</div>
+<div class="PaymentType">
+    <p class="Title"> Начин на плащане </p>
+    <button> Наложен платеж </button>
+    <button> По карта </button>
+</div>

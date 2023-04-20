@@ -19,6 +19,9 @@ import { AboutUsPageComponent } from './about-us-page/about-us-page.component';
 import { FaqPageComponent } from './faq-page/faq-page.component';
 import { ShoeFiltersComponent } from './shoe-filters/shoe-filters.component';
 import { ContactsPageComponent } from './contacts-page/contacts-page.component';
+import { CheckoutPageComponent } from './checkout-page/checkout-page.component';
+import { CheckoutPriceComponent } from './checkout-price/checkout-price.component';
+import { CheckoutFormComponent } from './checkout-form/checkout-form.component';
 
 
 @NgModule({
@@ -36,7 +39,10 @@ import { ContactsPageComponent } from './contacts-page/contacts-page.component';
     AboutUsPageComponent,
     FaqPageComponent,
     ShoeFiltersComponent,
-    ContactsPageComponent
+    ContactsPageComponent,
+    CheckoutPageComponent,
+    CheckoutPriceComponent,
+    CheckoutFormComponent
   ],
   imports: [
     BrowserAnimationsModule,

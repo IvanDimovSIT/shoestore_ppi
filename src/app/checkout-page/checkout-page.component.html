@@ -1,0 +1,18 @@
+<html>
+<head></head>
+<body>
+    <app-nav-bar></app-nav-bar>
+    <div class="CheckoutContainer">
+        <div class="CheckoutForm">
+            <app-checkout-form #checkoutForm>
+            </app-checkout-form>
+        </div>
+        <div class="CheckoutTotal">
+            <app-checkout-price [checkoutFormComponent]="checkoutForm" style="position: fixed;">
+            </app-checkout-price>
+        </div>
+    </div>
+    
+    <app-footer-bar></app-footer-bar>
+</body>
+</html>

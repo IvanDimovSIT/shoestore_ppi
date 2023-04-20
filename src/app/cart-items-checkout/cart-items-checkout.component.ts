@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { ShoppingCart } from 'src/model/ShoppingCart';
 
 @Component({
@@ -7,6 +8,10 @@ import { ShoppingCart } from 'src/model/ShoppingCart';
   styleUrls: ['./cart-items-checkout.component.css']
 })
 export class CartItemsCheckoutComponent {
+
+  public constructor(private router:Router){
+  }
+
   public GetTotalCost():number{
     let cost:number = 0;
     ShoppingCart.getAll().forEach(i =>{
@@ -14,4 +19,9 @@ export class CartItemsCheckoutComponent {
     });
     return Math.round(cost * 100) / 100;
   }
+
+  public navigateTo(path: string){
+    this.router.navigate([path]);
+  }
+
 }

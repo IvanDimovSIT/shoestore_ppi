@@ -1,0 +1,28 @@
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+td{
+    padding-right: 60px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+hr{
+    height: 1px;
+    background: linear-gradient(to right, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.8) 45%, rgba(0,0,0,0.8) 55%, rgba(0,0,0,0.2) 100%);
+    border: none;
+}
+
+.Title{
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.TotalCost{
+    font-weight: bold;
+}
+
+.Price{
+    text-align: right;
+}

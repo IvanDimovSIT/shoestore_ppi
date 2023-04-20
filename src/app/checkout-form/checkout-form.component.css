@@ -1,0 +1,77 @@
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.DeliveryInfo{
+    margin-bottom: 50px;
+}
+
+.ContactInfo{
+    margin-bottom: 50px;
+}
+
+.Title{
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.InputBox {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+  }
+  
+.InputBox::placeholder {
+    color: #555555;
+}
+
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    outline: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked {
+    background-color: #000;
+}
+  
+input[type="radio"]:hover {
+    transform: scale(1.2);
+}
+
+.PaymentType{
+    margin-bottom: 100px;
+}
+
+.PaymentType button{
+    font-family: Arial, sans-serif;
+    border-radius: 50px;
+    width: 50%;
+    height: 60px;
+    font-size: 18px;
+    text-align: center;
+    display: block;
+    background-color: black;
+    color: white;
+    border-color: transparent;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.PaymentType button:hover{
+    background-color: rgb(66,66,66);
+}
+

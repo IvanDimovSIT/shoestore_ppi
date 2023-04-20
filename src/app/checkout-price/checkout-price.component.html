@@ -1,0 +1,21 @@
+<p class="Title"> Обща сума </p>
+<table>
+    <tr>
+        <td><p>Продукти</p></td>
+        <td><p class="Price">{{price.toFixed(2)}}лв</p></td>        
+    </tr>
+
+    <tr>
+        <td><p>Доставка</p></td>
+        <td><p class="Price">{{getTransportationCost()}}лв</p></td>        
+    </tr>
+
+    <tr>
+        <td colspan="2"><hr></td>
+    </tr>
+
+    <tr>
+        <td><p class="TotalCost">Общо</p></td>
+        <td><p class="TotalCost" class="Price">{{(price+getTransportationCost()).toFixed(2)}}лв</p></td>  
+    </tr>
+</table>

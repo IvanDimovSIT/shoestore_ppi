@@ -1,0 +1,17 @@
+.CheckoutContainer{
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+    gap: 5vw;
+}
+
+.CheckoutForm{
+    width: 75%;
+}
+
+.CheckoutTotal{
+    width: 25%;
+}
