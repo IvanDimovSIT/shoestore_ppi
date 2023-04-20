@@ -4,6 +4,11 @@
     margin: 30px; 
 }
 
+.Greeting{
+    font-size: 40px;
+    font-weight: bold;
+}
+
 .PageContent{
     width: 60%;
     margin: auto;
