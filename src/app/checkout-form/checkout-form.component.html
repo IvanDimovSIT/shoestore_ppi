@@ -23,6 +23,13 @@
 </div>
 <div class="PaymentType">
     <p class="Title"> Начин на плащане </p>
-    <button> Наложен платеж </button>
-    <button> По карта </button>
+    <p>
+        <input type="radio" name="paymentType" value="Card" checked (click)="selectPaymentMethod('Card')">
+        Карта
+    </p>
+    <p>
+        <input type="radio" name="paymentType" value="Cash" (click)="selectPaymentMethod('Cash')">
+        Наложен платеж 
+    </p>
+    <button> Завършване </button>
 </div>
