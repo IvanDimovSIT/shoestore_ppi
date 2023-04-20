@@ -24,3 +24,9 @@ img{
     margin-right: auto;
     width: 30%;
 }
+
+hr{
+    height: 1px;
+    background: linear-gradient(to right, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.8) 45%, rgba(0,0,0,0.8) 55%, rgba(0,0,0,0.2) 100%);
+    border: none;
+}
