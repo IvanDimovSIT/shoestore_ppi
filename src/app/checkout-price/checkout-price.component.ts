@@ -8,9 +8,6 @@ import { CheckoutFormComponent } from '../checkout-form/checkout-form.component'
   styleUrls: ['./checkout-price.component.css']
 })
 export class CheckoutPriceComponent {
-  public static readonly ECONT_PRICE: number = 5;
-  public static readonly SPEEDY_PRICE: number = 10;
-
   @Input() public checkoutFormComponent: CheckoutFormComponent = new CheckoutFormComponent();
   public price: number = 0;
 
@@ -22,9 +19,12 @@ export class CheckoutPriceComponent {
   }
 
   public getTransportationCost():number{
-    return this.checkoutFormComponent.selectedCourier==='Econt'?
-      CheckoutPriceComponent.ECONT_PRICE:
-      CheckoutPriceComponent.SPEEDY_PRICE;
+    return (this.checkoutFormComponent.selectedCourier==='Econt'?
+    this.checkoutFormComponent.ECONT_PRICE:
+    this.checkoutFormComponent.SPEEDY_PRICE) + 
+    (this.checkoutFormComponent.deliveryMethod==='office'?
+    0:
+    this.checkoutFormComponent.ADDRESS_DELIVERY_PRICE);
   }
 
 }

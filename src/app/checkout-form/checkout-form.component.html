@@ -9,20 +9,20 @@
     <p class="Title"> Куриер </p>
     <p>
         <input type="radio" name="courier" value="Econt" checked (click)="selectCourier('Econt')">
-        Еконт (5лв)
+        Еконт (+{{ECONT_PRICE}}лв)
     </p>
     <p>
         <input type="radio" name="courier" value="Speedy" (click)="selectCourier('Speedy')">
-        Speedy (10лв)
+        Speedy (+{{SPEEDY_PRICE}}лв)
     </p>
     <p class="Title"> Метод на доставка </p>
     <p>
         <input type="radio" name="deliveryMethod" value="address" checked (click)="selectDeliveryMethod('address')">
-        Адрес
+        Адрес (+{{ADDRESS_DELIVERY_PRICE}}лв)
     </p>
     <p>
         <input type="radio" name="deliveryMethod" value="office" (click)="selectDeliveryMethod('office')">
-        Офис на {{selectedCourier==='Econt'?'Еконт':'Speedy'}}
+        Офис на {{selectedCourier==='Econt'?'Еконт':'Speedy'}} (+0лв)
     </p>
     <p class="Title"> Данни за доставка </p>
     <input placeholder=
