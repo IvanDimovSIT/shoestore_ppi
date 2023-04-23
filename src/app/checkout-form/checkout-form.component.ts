@@ -9,9 +9,14 @@ import { CheckoutPriceComponent } from '../checkout-price/checkout-price.compone
 export class CheckoutFormComponent {
   public selectedCourier: string = 'Econt';
   public paymentMethod: string = 'Card';
+  public deliveryMethod: string = 'address';
 
   public selectCourier(selected: string){
     this.selectedCourier = selected;    
+  }
+
+  public selectDeliveryMethod(method: string){
+    this.deliveryMethod = method;
   }
 
   public selectPaymentMethod(selected: string){

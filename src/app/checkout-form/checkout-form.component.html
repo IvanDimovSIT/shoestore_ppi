@@ -1,9 +1,11 @@
+<div class="ContactInfo">
+    <p class="Title"> Данни за контакт </p>
+    <input placeholder="Име" class="InputBox">
+    <input placeholder="Фамилия" class="InputBox">
+    <input placeholder="Телефон" class="InputBox">
+    <input placeholder="Е-мейл" class="InputBox">
+</div>
 <div class="DeliveryInfo">
-    <p class="Title"> Данни за доставка </p>
-    <input placeholder="Адрес" class="InputBox">
-    <input placeholder="Град" class="InputBox">
-    <input placeholder="Пощенски код" class="InputBox">
-    <input placeholder="Държава" class="InputBox">
     <p class="Title"> Куриер </p>
     <p>
         <input type="radio" name="courier" value="Econt" checked (click)="selectCourier('Econt')">
@@ -13,13 +15,22 @@
         <input type="radio" name="courier" value="Speedy" (click)="selectCourier('Speedy')">
         Speedy (10лв)
     </p>
-</div>
-<div class="ContactInfo">
-    <p class="Title"> Данни за контакт </p>
-    <input placeholder="Име" class="InputBox">
-    <input placeholder="Фамилия" class="InputBox">
-    <input placeholder="Телефон" class="InputBox">
-    <input placeholder="Е-мейл" class="InputBox">
+    <p class="Title"> Метод на доставка </p>
+    <p>
+        <input type="radio" name="deliveryMethod" value="address" checked (click)="selectDeliveryMethod('address')">
+        Адрес
+    </p>
+    <p>
+        <input type="radio" name="deliveryMethod" value="office" (click)="selectDeliveryMethod('office')">
+        Офис на {{selectedCourier==='Econt'?'Еконт':'Speedy'}}
+    </p>
+    <p class="Title"> Данни за доставка </p>
+    <input placeholder=
+    "{{deliveryMethod==='address'?'Адрес за доставка':'Адрес на '+(selectedCourier==='Econt'?'Еконт':'Speedy')}}" 
+    class="InputBox">
+    <input placeholder="Град" class="InputBox">
+    <input placeholder="Пощенски код" class="InputBox">
+    <input placeholder="Държава" class="InputBox">
 </div>
 <div class="PaymentType">
     <p class="Title"> Начин на плащане </p>
