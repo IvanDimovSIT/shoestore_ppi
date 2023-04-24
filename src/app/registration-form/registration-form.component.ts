@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from 'src/model/User';
 import { UserData } from 'src/model/UserData';
+import { NotificationComponent } from '../notification/notification.component';
 
 @Component({
   selector: 'app-registration-form',
@@ -9,6 +10,8 @@ import { UserData } from 'src/model/UserData';
   styleUrls: ['./registration-form.component.css']
 })
 export class RegistrationFormComponent {
+  @Input() public notification: NotificationComponent = new NotificationComponent();
+  
   public registrationData = {
     firstName: "",
     lastName: "",
@@ -27,6 +30,12 @@ export class RegistrationFormComponent {
 
   public ngOnInit():void{
     console.log("UserData:",UserData);
+  }
+
+  private showNotification(message: string): void {
+    console.log(message);
+    this.notification.message = message;
+    this.notification.showMessage();
   }
 
   private validate():boolean{
@@ -52,12 +61,12 @@ export class RegistrationFormComponent {
     console.log("Enterd data:", this.registrationData);
     console.log("Registerd users:", UserData);
     if(!this.validate()){
-      console.log("Not all fields entered!");
+      this.showNotification("Не са попълнени всички полета");
       return;
     }
 
     if(this.registrationData.password !== this.registrationData.passwordConfirm){
-      console.log("password fields don't match!");
+      this.showNotification("Паролите не съответстават");
       return;
     }
     if(UserData.add(
@@ -67,10 +76,10 @@ export class RegistrationFormComponent {
         this.registrationData.firstName,
         this.registrationData.lastName,
         this.registrationData.phone))){
-      console.log("User registered successfully");
+      this.showNotification("Успешна регистрация!");
       this.clearFields();
     }else{
-      console.log("Email already registered!");
+      this.showNotification("Е-мейлът вече се използва");
     }
   }
 

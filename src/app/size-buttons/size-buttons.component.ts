@@ -1,7 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
 import { ShoeItem } from 'src/model/ShoeItem';
 import { ShoppingCart } from 'src/model/ShoppingCart';
 import { ShoePageComponent } from '../shoe-page/shoe-page.component';
+import { NotificationComponent } from '../notification/notification.component';
 
 @Component({
   selector: 'app-size-buttons',
@@ -9,6 +10,7 @@ import { ShoePageComponent } from '../shoe-page/shoe-page.component';
   styleUrls: ['./size-buttons.component.css']
 })
 export class SizeButtonsComponent {
+  @Input() public notification: NotificationComponent = new NotificationComponent();
   @Input() shoe: ShoeItem|null = null;
   selectedSize: string|null = null;
 
@@ -26,5 +28,12 @@ export class SizeButtonsComponent {
       return;
 
     ShoppingCart.addById(this.shoe!.Id, this.selectedSize);
+    this.showNotification();
   }
+
+  private showNotification(): void {
+    console.log("Added to cart!");
+    this.notification.showMessage();
+  }
+
 }

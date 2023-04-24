@@ -1,0 +1,29 @@
+.Notification{
+    position: fixed;
+    float: right;
+    top: 10%;
+    left: 5%;
+    right: 5%;
+    z-index: 9999;
+    background-color: rgba(200, 200, 200, 0.8);
+    align-self: center;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 20px;
+}
+
+.Notification.show {
+    animation: slideDown 0.5s;
+}
+  
+@keyframes slideDown {
+    from {
+      top: -50px;
+    }
+    to {
+      top: 10%;
+    }
+}

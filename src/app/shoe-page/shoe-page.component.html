@@ -2,6 +2,7 @@
 <head></head>
 <body>
     <app-nav-bar></app-nav-bar>
+    <app-notification #notification [message]="'Добавено в количката!'"></app-notification>
     <br><br><br>
     <div class="BuyShoe">
         <div class="ShoeImage">
@@ -13,7 +14,7 @@
             <p class="ShoeGender">{{shoe?.getGenderDescription()}}</p>
             <p class="ShoePrice">{{shoe?.Price}} лв.</p>
             <p class="SelectSize">Изберете размер:</p>
-            <p class="SizeButtons"><app-size-buttons [shoe]="shoe"></app-size-buttons></p>
+            <p class="SizeButtons"><app-size-buttons [notification]="notification" [shoe]="shoe"></app-size-buttons></p>
         </div>
     </div>
     <app-footer-bar></app-footer-bar>

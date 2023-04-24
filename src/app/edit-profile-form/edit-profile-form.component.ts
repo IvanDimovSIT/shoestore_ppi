@@ -50,4 +50,9 @@ export class EditProfileFormComponent {
   public navigateTo(path: string){
     this.router.navigate([path]);
   }
+
+  public exit(){
+    CurrentUser.email = null;
+    this.navigateTo("");
+  }
 }

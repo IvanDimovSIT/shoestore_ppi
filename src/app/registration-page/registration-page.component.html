@@ -3,8 +3,9 @@
 <body>
 <app-nav-bar></app-nav-bar>
 <br><br><br><br><br>
+<app-notification #notification></app-notification>
 <div class="PageContents">
-    <app-registration-form></app-registration-form>
+    <app-registration-form [notification]="notification"></app-registration-form>
 </div>
 <app-footer-bar></app-footer-bar>
 </body>

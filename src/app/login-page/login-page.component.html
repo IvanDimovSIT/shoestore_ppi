@@ -2,8 +2,9 @@
 <head></head>
 <body>
 <app-nav-bar></app-nav-bar>
+<app-notification #notification></app-notification>
 <div class="PageContents">
-    <app-login-form></app-login-form>
+    <app-login-form [notification]="notification"></app-login-form>
 </div>
 <app-footer-bar></app-footer-bar>
 </body>

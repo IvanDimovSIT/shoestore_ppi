@@ -30,6 +30,7 @@ import { FormsModule } from '@angular/forms';
 import { BasePageComponent } from './base-page/base-page.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { EditProfileFormComponent } from './edit-profile-form/edit-profile-form.component';
+import { NotificationComponent } from './notification/notification.component';
 
 
 @NgModule({
@@ -57,7 +58,8 @@ import { EditProfileFormComponent } from './edit-profile-form/edit-profile-form.
     RegistrationFormComponent,
     BasePageComponent,
     ProfilePageComponent,
-    EditProfileFormComponent
+    EditProfileFormComponent,
+    NotificationComponent
   ],
   imports: [
     BrowserAnimationsModule,
