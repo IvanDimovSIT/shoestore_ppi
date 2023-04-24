@@ -3,8 +3,9 @@
 </head>
 <body>
 <app-nav-bar></app-nav-bar>
+<app-notification #notification></app-notification>
 <div class="PageContents">
-    <app-edit-profile-form></app-edit-profile-form>
+    <app-edit-profile-form [notification]="notification"></app-edit-profile-form>
 </div>
 <app-footer-bar></app-footer-bar>
 </body>
