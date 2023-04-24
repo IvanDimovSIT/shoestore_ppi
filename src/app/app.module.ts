@@ -28,6 +28,8 @@ import { RegistrationPageComponent } from './registration-page/registration-page
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import { FormsModule } from '@angular/forms';
 import { BasePageComponent } from './base-page/base-page.component';
+import { ProfilePageComponent } from './profile-page/profile-page.component';
+import { EditProfileFormComponent } from './edit-profile-form/edit-profile-form.component';
 
 
 @NgModule({
@@ -53,7 +55,9 @@ import { BasePageComponent } from './base-page/base-page.component';
     LoginFormComponent,
     RegistrationPageComponent,
     RegistrationFormComponent,
-    BasePageComponent
+    BasePageComponent,
+    ProfilePageComponent,
+    EditProfileFormComponent
   ],
   imports: [
     BrowserAnimationsModule,

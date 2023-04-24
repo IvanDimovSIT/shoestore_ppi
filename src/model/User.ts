@@ -49,7 +49,7 @@ export class User {
     return this._phoneNumber;
   }
   
-  public set phoneNumbers(phoneNumber: string) {
+  public set phoneNumber(phoneNumber: string) {
     this._phoneNumber = phoneNumber;
   }
 }

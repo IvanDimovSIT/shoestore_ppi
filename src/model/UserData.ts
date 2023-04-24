@@ -17,6 +17,10 @@ export class UserData{
         return true;
     }
 
+    public static set(user: User):void{
+        this.users.set(user.email, user);
+    }
+
     public static get(email: string):User|undefined{
         return this.users.get(email);
     }

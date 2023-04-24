@@ -20,8 +20,6 @@ export class CheckoutFormComponent {
   public ngOnInit(){
     if(CurrentUser.email === null)
       return;
-
-      console.log("ngOnOnInit!!");
     
     const firstName:HTMLInputElement = document.getElementById('firstName') as HTMLInputElement;
     const lastName:HTMLInputElement = document.getElementById('lastName') as HTMLInputElement;

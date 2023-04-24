@@ -10,16 +10,18 @@ import { ContactsPageComponent } from './contacts-page/contacts-page.component';
 import { CheckoutPageComponent } from './checkout-page/checkout-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { RegistrationPageComponent } from './registration-page/registration-page.component';
+import { ProfilePageComponent } from './profile-page/profile-page.component';
 
 // Routing between pages
 const routes: Routes = [
   { path: '', redirectTo: '/store/A/1/A/A', pathMatch: 'full' },
-  { path: 'shoe-page/:id', component: ShoePageComponent }, //using GET method
-  { path: 'store/:g/:p/:price/:color', component: StorePageComponent},
+  { path: 'shoe-page/:id', component: ShoePageComponent }, 
+  { path: 'store/:g/:p/:price/:color', component: StorePageComponent}, //use path variables
   { path: 'cart', component: CartPageComponent},
   { path: 'checkout', component: CheckoutPageComponent},
   { path: 'login', component: LoginPageComponent},
   { path: 'registration', component: RegistrationPageComponent},
+  { path: 'profile', component: ProfilePageComponent},
   { path: 'about-us', component: AboutUsPageComponent},
   { path: 'FAQ', component: FaqPageComponent},
   { path: 'contacts', component: ContactsPageComponent},

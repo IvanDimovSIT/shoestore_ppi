@@ -1,0 +1,9 @@
+<div class="RegistrationForm">
+    <p class="Title"> Профил </p>
+    <p class="Email"><img src="../../assets/emailIcon.png">{{email}}</p>
+    <input type="text" placeholder="Име" [(ngModel)]="firstName" class="FirstName">
+    <input type="text" placeholder="Фамилия" [(ngModel)]="lastName" class="LastName">
+    <input type="text" placeholder="Телефон" [(ngModel)]="phone" class="Phone">
+    <button class="UpdateButton" (click)="update()"> Актуализиране </button>
+    <p class="Exit" (click)="navigateTo('login')"> Изход </p>
+</div>

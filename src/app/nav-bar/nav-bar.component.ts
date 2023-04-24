@@ -47,4 +47,12 @@ export class NavBarComponent {
     this.router.navigate([path]);
   }
 
+  public navigateProfile(){
+    if(CurrentUser.email === null){
+      this.navigateTo("login");
+    }else{
+      this.navigateTo("profile");
+    }
+  }
+
 }
