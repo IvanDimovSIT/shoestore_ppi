@@ -1,0 +1,14 @@
+.PageContents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 100px;
+}
+
+app-registration-form{
+    display: inline-block;
+}
+  

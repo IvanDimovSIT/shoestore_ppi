@@ -12,6 +12,7 @@
 .PageContent{
     width: 60%;
     margin: auto;
+    min-height: 100vh;
 }
 
 img{

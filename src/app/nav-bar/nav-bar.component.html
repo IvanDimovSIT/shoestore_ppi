@@ -4,12 +4,12 @@
         <li (click)="navigateStore('M')"><a>Мъже</a></li>
         <li (click)="navigateStore('F')"><a>Жени</a></li>
         <li (click)="navigateStore('K')"><a>Деца</a></li>
-        <li (click)="navigateStore('A')"><a>Намаления</a></li>
+        <li (click)="navigateTo('login')"><a>{{getLoginButtonText()}}</a></li>
     </ul>
     <p class="ItemsInCartNumber">
         {{getCartItemsCount()}}
     </p>
-    <a class="CartLink" href="/cart">
+    <a class="CartLink" (click)="navigateTo('cart')">
         <img src="../../assets/cart.png" class="NavBarCart">
     </a>
 </div>

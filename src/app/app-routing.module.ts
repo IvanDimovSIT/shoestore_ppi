@@ -8,6 +8,8 @@ import { AboutUsPageComponent } from './about-us-page/about-us-page.component';
 import { FaqPageComponent } from './faq-page/faq-page.component';
 import { ContactsPageComponent } from './contacts-page/contacts-page.component';
 import { CheckoutPageComponent } from './checkout-page/checkout-page.component';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { RegistrationPageComponent } from './registration-page/registration-page.component';
 
 // Routing between pages
 const routes: Routes = [
@@ -16,6 +18,8 @@ const routes: Routes = [
   { path: 'store/:g/:p/:price/:color', component: StorePageComponent},
   { path: 'cart', component: CartPageComponent},
   { path: 'checkout', component: CheckoutPageComponent},
+  { path: 'login', component: LoginPageComponent},
+  { path: 'registration', component: RegistrationPageComponent},
   { path: 'about-us', component: AboutUsPageComponent},
   { path: 'FAQ', component: FaqPageComponent},
   { path: 'contacts', component: ContactsPageComponent},

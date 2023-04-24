@@ -22,6 +22,12 @@ import { ContactsPageComponent } from './contacts-page/contacts-page.component';
 import { CheckoutPageComponent } from './checkout-page/checkout-page.component';
 import { CheckoutPriceComponent } from './checkout-price/checkout-price.component';
 import { CheckoutFormComponent } from './checkout-form/checkout-form.component';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { LoginFormComponent } from './login-form/login-form.component';
+import { RegistrationPageComponent } from './registration-page/registration-page.component';
+import { RegistrationFormComponent } from './registration-form/registration-form.component';
+import { FormsModule } from '@angular/forms';
+import { BasePageComponent } from './base-page/base-page.component';
 
 
 @NgModule({
@@ -42,13 +48,19 @@ import { CheckoutFormComponent } from './checkout-form/checkout-form.component';
     ContactsPageComponent,
     CheckoutPageComponent,
     CheckoutPriceComponent,
-    CheckoutFormComponent
+    CheckoutFormComponent,
+    LoginPageComponent,
+    LoginFormComponent,
+    RegistrationPageComponent,
+    RegistrationFormComponent,
+    BasePageComponent
   ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

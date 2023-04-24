@@ -13,6 +13,7 @@ import {
 } from '@angular/animations'; // animations
 import { CookieService } from 'ngx-cookie-service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CurrentUser } from 'src/model/CurrentUser';
 
 @Component({
   selector: 'app-nav-bar',
@@ -23,6 +24,10 @@ export class NavBarComponent {
   
   public constructor(private router: Router, private route: ActivatedRoute){
     ShoppingCart.setSessionStorage();
+  }
+
+  public getLoginButtonText():string{
+    return CurrentUser.email === null?"Вход":"Профил";
   }
 
   public getCartItemsCount():number{
@@ -36,6 +41,10 @@ export class NavBarComponent {
       this.route.snapshot.paramMap.get('price')===null?'A':this.route.snapshot.paramMap.get('price'),
       this.route.snapshot.paramMap.get('color')===null?'A':this.route.snapshot.paramMap.get('color')],
       { replaceUrl: true });
+  }
+
+  public navigateTo(path: string){
+    this.router.navigate([path]);
   }
 
 }

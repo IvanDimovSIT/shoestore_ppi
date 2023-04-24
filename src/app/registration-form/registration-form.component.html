@@ -1,0 +1,11 @@
+<div class="RegistrationForm">
+    <p class="Title"> Регистрация </p>
+    <input type="text" placeholder="Име" [(ngModel)]="registrationData.firstName" class="FirstName">
+    <input type="text" placeholder="Фамилия" [(ngModel)]="registrationData.lastName" class="LastName">
+    <input type="text" placeholder="Телефон" [(ngModel)]="registrationData.phone" class="Phone">
+    <input type="text" placeholder="Е-мейл" [(ngModel)]="registrationData.email" class="Email">
+    <input type="password" placeholder="Парола" [(ngModel)]="registrationData.password" class="Password">
+    <input type="password" placeholder="Потвърдете Паролата" [(ngModel)]="registrationData.passwordConfirm" class="PasswordConfirm">
+    <button class="RegisterButton" (click)="register()"> Регистриране </button>
+    <p class="LogIn" (click)="navigateTo('login')">Вход</p>
+</div>

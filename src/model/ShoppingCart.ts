@@ -6,15 +6,15 @@ export class ShoppingCart {
     private static readonly STORAGE_KEY = "ShoppingCart";
     private static shoeOrderList: ShoeOrder[] = [];
 
-    private static logDebug() {
+    private static logDebug():void {
         console.log("Shopping Cart:", this.shoeOrderList);
     }
 
-    private static saveToStorage(){
+    private static saveToStorage():void{
         sessionStorage.setItem(this.STORAGE_KEY, JSON.stringify(this.shoeOrderList));
     }
 
-    public static setSessionStorage() {
+    public static setSessionStorage():void {
         const storageValue = sessionStorage.getItem(this.STORAGE_KEY);
         if (storageValue) {
             try {
@@ -37,7 +37,7 @@ export class ShoppingCart {
         this.logDebug();
     }
 
-    private static addToCart(shoeOrder: ShoeOrder){
+    private static addToCart(shoeOrder: ShoeOrder):void{
         let flag: boolean = false;
         this.shoeOrderList.forEach(i =>{
             console.log("Adding to cart:", shoeOrder, i);
@@ -53,7 +53,7 @@ export class ShoppingCart {
         this.shoeOrderList.push(shoeOrder);
     }
 
-    public static addById(itemId: number, shoeSize: string) {
+    public static addById(itemId: number, shoeSize: string):void {
         if (!ShoeItemData.has(itemId)) {
             console.error(`Item with ID ${itemId} not found in ShoeItemData:`, ShoeItemData);
             return;
@@ -77,18 +77,18 @@ export class ShoppingCart {
         return count;
     }
 
-    public static removeAll(){
+    public static removeAll():void{
         this.shoeOrderList = [];
         this.saveToStorage();
     }
 
-    public static remove(shoeOrder: ShoeOrder){
+    public static remove(shoeOrder: ShoeOrder):void{
         this.shoeOrderList = this.shoeOrderList.filter(i => 
             !(i.shoeSize === shoeOrder.shoeSize && i.shoeItem.Id === shoeOrder.shoeItem.Id));
         this.saveToStorage();
     }
   
-    public static removeQuantity(shoeOrder: ShoeOrder){
+    public static removeQuantity(shoeOrder: ShoeOrder):void{
         let flag: boolean = false;
         this.shoeOrderList.forEach(i => {
             if(i.shoeSize === shoeOrder.shoeSize && i.shoeItem.Id === shoeOrder.shoeItem.Id){

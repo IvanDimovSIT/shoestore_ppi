@@ -3,7 +3,7 @@ import { Colors, Genders, ShoeItem } from "./ShoeItem";
 export class ShoeItemData{
     private static shoes:Map<number, ShoeItem> = new Map<number, ShoeItem>;
 
-    public static init(){
+    public static init():void{
         this.shoes.set(1, new ShoeItem(1,"Nike Terminator High OG",199.99, "../assets/shoes/shoe1.png", Genders.M, Colors.Grey, ["36", "38", "40" , "42", "43", "44", "45", "45.5", "46", "47", "47.5", "48", "49"]));
         this.shoes.set(2, new ShoeItem(2,"Air Max 1 '87",299.99, "../assets/shoes/shoe2.png", Genders.M, Colors.Red ,["36", "38", "40" , "42", "43", "44", "45", "45.5", "46", "47", "47.5", "48", "49"]));
         this.shoes.set(3, new ShoeItem(3,"Air Max Furyosa",79.99, "../assets/shoes/shoe3.png", Genders.F, Colors.Brown, ["35", "36", "36.5", "38", "38.5", "39", "40", "40.5", "41", "42", "43", "44", "44.5"]));
