@@ -1,0 +1,15 @@
+<div class="NavBar">
+    <ul>
+        <li (click)="navigateStore('A')"><a>Всички</a></li>
+        <li (click)="navigateStore('M')"><a>Мъже</a></li>
+        <li (click)="navigateStore('F')"><a>Жени</a></li>
+        <li (click)="navigateStore('K')"><a>Деца</a></li>
+        <li (click)="navigateProfile()"><a>{{getLoginButtonText()}}</a></li>
+    </ul>
+    <p class="ItemsInCartNumber">
+        {{getCartItemsCount()}}
+    </p>
+    <a class="CartLink" (click)="navigateTo('cart')">
+        <img src="../../../../assets/cart.png" class="NavBarCart">
+    </a>
+</div>

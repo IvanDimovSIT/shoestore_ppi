@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { CartPageComponent } from './cart-page/cart-page.component';
-import { ShoePageComponent } from './shoe-page/shoe-page.component';
-import { StorePageComponent } from './store-page/store-page.component';
-import { AboutUsPageComponent } from './about-us-page/about-us-page.component';
-import { FaqPageComponent } from './faq-page/faq-page.component';
-import { ContactsPageComponent } from './contacts-page/contacts-page.component';
-import { CheckoutPageComponent } from './checkout-page/checkout-page.component';
-import { LoginPageComponent } from './login-page/login-page.component';
-import { RegistrationPageComponent } from './registration-page/registration-page.component';
-import { ProfilePageComponent } from './profile-page/profile-page.component';
+import { CartPageComponent } from './cart-page-components/cart-page/cart-page.component';
+import { ShoePageComponent } from './shoe-page-components/shoe-page/shoe-page.component';
+import { StorePageComponent } from './store-components/store-page/store-page.component';
+import { AboutUsPageComponent } from './information-pages/about-us-page/about-us-page.component';
+import { FaqPageComponent } from './information-pages/faq-page/faq-page.component';
+import { ContactsPageComponent } from './information-pages/contacts-page/contacts-page.component';
+import { CheckoutPageComponent } from './checkout-page-components/checkout-page/checkout-page.component';
+import { LoginPageComponent } from './login-page-components/login-page/login-page.component';
+import { RegistrationPageComponent } from './registration-page-components/registration-page/registration-page.component';
+import { ProfilePageComponent } from './profile-page-components/profile-page/profile-page.component';
 import { PurchaseCompletePageComponent } from './purchase-complete-page/purchase-complete-page.component';
 import { PaymentPageComponent } from './payment-page/payment-page.component';
 
