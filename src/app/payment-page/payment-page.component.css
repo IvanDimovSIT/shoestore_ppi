@@ -3,11 +3,26 @@ p{
 }
 
 .PaymentAmount{
-    font-size: 18px;
+    font-size: 20px;
 }
 
+.CancelPayment{
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: underline;
+    padding-top: 30px;
+}
+
+.CancelPayment:hover{
+    color: #555555;
+}
+
+
 .Title{
-    font-size: 24px;
+    font-size: 26px;
     text-align: center;
     font-weight: bold;
 }

@@ -34,6 +34,8 @@ import { NotificationComponent } from './notification/notification.component';
 import { PurchaseCompletePageComponent } from './purchase-complete-page/purchase-complete-page.component';
 import { PaymentPageComponent } from './payment-page/payment-page.component';
 import { TotalPriceService } from 'src/service/TotalPriceService';
+import { PaypalConfigService } from 'src/service/PaypalConfigService';
+import { NgxPayPalModule } from 'ngx-paypal';
 
 
 @NgModule({
@@ -71,9 +73,13 @@ import { TotalPriceService } from 'src/service/TotalPriceService';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule 
+    FormsModule,
+    NgxPayPalModule 
   ],
-  providers: [TotalPriceService],
+  providers: [
+    TotalPriceService,
+    PaypalConfigService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
