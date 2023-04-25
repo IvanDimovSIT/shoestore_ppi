@@ -20,8 +20,9 @@ export class PaymentPageComponent extends BasePageComponent implements IPaypalPa
   ){
     super();
     this.price = totalPriceService.price;
-    if(this.price <= 0)
+    if(this.price <= 0){
       this.router.navigate([""]);
+    }
     paypalConfigService.initConfig(this.price, this);
   }
 
@@ -36,10 +37,10 @@ export class PaymentPageComponent extends BasePageComponent implements IPaypalPa
   }
 
   public onCancel(): void {
-    console.error("\"public onCancel():void\" not implemented");
+    console.error("\"public onCancel():void\" not implemented in ", this);
   }
   public onFail(): void {
-    console.error("\"public onFail():void\" not implemented");
+    console.error("\"public onFail():void\" not implemented in ", this);
   }
 
 }
