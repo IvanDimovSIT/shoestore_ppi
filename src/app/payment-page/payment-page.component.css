@@ -1,0 +1,21 @@
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.PaymentAmount{
+    font-size: 18px;
+}
+
+.Title{
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.PageContents{
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 90vh;
+}

@@ -7,7 +7,7 @@
 
     <tr>
         <td><p>Доставка</p></td>
-        <td><p class="Price">{{getTransportationCost().toFixed(2)}}лв</p></td>        
+        <td><p class="Price">{{checkoutFormComponent!.getTransportationCost().toFixed(2)}}лв</p></td>        
     </tr>
 
     <tr>
@@ -16,6 +16,8 @@
 
     <tr>
         <td><p class="TotalCost">Общо</p></td>
-        <td><p class="TotalCost" class="Price">{{(price+getTransportationCost()).toFixed(2)}}лв</p></td>  
+        <td><p class="TotalCost" class="Price">
+            {{(price+checkoutFormComponent!.getTransportationCost()).toFixed(2)}}лв
+        </p></td>  
     </tr>
 </table>

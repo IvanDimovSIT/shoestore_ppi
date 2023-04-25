@@ -1,0 +1,43 @@
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Title{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+img{
+    width: 300px;
+    height: auto;
+}
+
+.PageContents{
+    padding-top: 50px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 90vh;
+}
+
+button{
+    font-family: Arial, sans-serif;
+    border-radius: 50px;
+    width: 40%;
+    height: 60px;
+    font-size: 18px;
+    text-align: center;
+    display: block;
+    background-color: black;
+    color: white;
+    border-color: transparent;
+    cursor: pointer;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+button:hover{
+    background-color: rgb(66,66,66);
+}

@@ -31,6 +31,9 @@ import { BasePageComponent } from './base-page/base-page.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { EditProfileFormComponent } from './edit-profile-form/edit-profile-form.component';
 import { NotificationComponent } from './notification/notification.component';
+import { PurchaseCompletePageComponent } from './purchase-complete-page/purchase-complete-page.component';
+import { PaymentPageComponent } from './payment-page/payment-page.component';
+import { TotalPriceService } from 'src/service/TotalPriceService';
 
 
 @NgModule({
@@ -59,7 +62,9 @@ import { NotificationComponent } from './notification/notification.component';
     BasePageComponent,
     ProfilePageComponent,
     EditProfileFormComponent,
-    NotificationComponent
+    NotificationComponent,
+    PurchaseCompletePageComponent,
+    PaymentPageComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -68,7 +73,7 @@ import { NotificationComponent } from './notification/notification.component';
     HttpClientModule,
     FormsModule 
   ],
-  providers: [],
+  providers: [TotalPriceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

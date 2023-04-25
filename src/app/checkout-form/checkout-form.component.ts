@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { CurrentUser } from 'src/model/CurrentUser';
+import { ShoppingCart } from 'src/model/ShoppingCart';
 import { User } from 'src/model/User';
 import { UserData } from 'src/model/UserData';
+import { TotalPriceService } from 'src/service/TotalPriceService';
 
 @Component({
   selector: 'app-checkout-form',
@@ -16,6 +19,10 @@ export class CheckoutFormComponent {
   public selectedCourier: string = 'Econt';
   public paymentMethod: string = 'Card';
   public deliveryMethod: string = 'address';
+
+  public constructor(private router:Router, private totalPriceService: TotalPriceService){
+  }
+
 
   public ngOnInit(){
     if(CurrentUser.email === null)
@@ -46,6 +53,31 @@ export class CheckoutFormComponent {
 
   public selectPaymentMethod(selected: string){
     this.paymentMethod = selected;
+  }
+
+  public finishCheckout(){
+    if(this.paymentMethod === "Cash"){
+      ShoppingCart.removeAll();
+      this.router.navigate(["purchase-complete"]);
+    }else if(this.paymentMethod === "Card"){
+      let price = 0;
+      ShoppingCart.getAll().forEach(i => {
+        price += i.count * i.shoeItem.Price;
+      });
+      this.totalPriceService.price = this.getTransportationCost() + price; 
+      this.router.navigate(["payment"]);
+    }else{
+      console.error("Invalid payment method");
+    }
+  }
+
+  public getTransportationCost():number{
+    return (this.selectedCourier==='Econt'?
+    this.ECONT_PRICE:
+    this.SPEEDY_PRICE) + 
+    (this.deliveryMethod==='office'?
+    0:
+    this.ADDRESS_DELIVERY_PRICE);
   }
 
 }

@@ -8,7 +8,7 @@ import { CheckoutFormComponent } from '../checkout-form/checkout-form.component'
   styleUrls: ['./checkout-price.component.css']
 })
 export class CheckoutPriceComponent {
-  @Input() public checkoutFormComponent: CheckoutFormComponent = new CheckoutFormComponent();
+  @Input() public checkoutFormComponent: CheckoutFormComponent|null = null;
   public price: number = 0;
 
 
@@ -16,15 +16,6 @@ export class CheckoutPriceComponent {
     ShoppingCart.getAll().forEach(i => {
       this.price += i.count * i.shoeItem.Price;
     });
-  }
-
-  public getTransportationCost():number{
-    return (this.checkoutFormComponent.selectedCourier==='Econt'?
-    this.checkoutFormComponent.ECONT_PRICE:
-    this.checkoutFormComponent.SPEEDY_PRICE) + 
-    (this.checkoutFormComponent.deliveryMethod==='office'?
-    0:
-    this.checkoutFormComponent.ADDRESS_DELIVERY_PRICE);
   }
 
 }

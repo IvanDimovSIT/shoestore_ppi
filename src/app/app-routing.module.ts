@@ -11,6 +11,8 @@ import { CheckoutPageComponent } from './checkout-page/checkout-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { RegistrationPageComponent } from './registration-page/registration-page.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
+import { PurchaseCompletePageComponent } from './purchase-complete-page/purchase-complete-page.component';
+import { PaymentPageComponent } from './payment-page/payment-page.component';
 
 // Routing between pages
 const routes: Routes = [
@@ -19,6 +21,8 @@ const routes: Routes = [
   { path: 'store/:g/:p/:price/:color', component: StorePageComponent}, //use path variables
   { path: 'cart', component: CartPageComponent},
   { path: 'checkout', component: CheckoutPageComponent},
+  { path: 'purchase-complete', component: PurchaseCompletePageComponent},
+  { path: 'payment', component: PaymentPageComponent},
   { path: 'login', component: LoginPageComponent},
   { path: 'registration', component: RegistrationPageComponent},
   { path: 'profile', component: ProfilePageComponent},
