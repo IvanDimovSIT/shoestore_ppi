@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ICreateOrderRequest, IPayPalConfig } from 'ngx-paypal';
 
-export interface PaypalPaymentHandler{
+export interface IPaypalPaymentHandler{
     onSuccess():void;
     onCancel():void;
     onFail():void;
@@ -12,13 +12,13 @@ export interface PaypalPaymentHandler{
 })
 export class PaypalConfigService {
     public payPalConfig ? : IPayPalConfig;
-    public paymentHandler ? : PaypalPaymentHandler;
+    public paymentHandler ? : IPaypalPaymentHandler;
 
     private convertToEUR(BGN: number){
         return BGN*0.51;
     }
 
-    public initConfig(price: number, paymentHandler: PaypalPaymentHandler): void {
+    public initConfig(price: number, paymentHandler: IPaypalPaymentHandler): void {
         const amount:string = this.convertToEUR(price).toFixed(2);
         this.paymentHandler = paymentHandler;
         this.payPalConfig = {
@@ -80,7 +80,6 @@ export class PaypalConfigService {
             },
             onClick: (data, actions) => {
                 console.log('onClick', data, actions);
-                //Reset Data
             }
         };
     }

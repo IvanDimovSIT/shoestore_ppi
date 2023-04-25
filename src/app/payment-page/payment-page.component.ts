@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { BasePageComponent } from '../base-page/base-page.component';
 import { TotalPriceService } from 'src/service/TotalPriceService';
-import { PaypalConfigService, PaypalPaymentHandler } from 'src/service/PaypalConfigService';
+import { PaypalConfigService, IPaypalPaymentHandler } from 'src/service/PaypalConfigService';
 import { Router } from '@angular/router';
 import { ShoppingCart } from 'src/model/ShoppingCart';
 
@@ -10,7 +10,7 @@ import { ShoppingCart } from 'src/model/ShoppingCart';
   templateUrl: './payment-page.component.html',
   styleUrls: ['./payment-page.component.css']
 })
-export class PaymentPageComponent extends BasePageComponent implements PaypalPaymentHandler{
+export class PaymentPageComponent extends BasePageComponent implements IPaypalPaymentHandler{
   public price: number;
 
   constructor(
