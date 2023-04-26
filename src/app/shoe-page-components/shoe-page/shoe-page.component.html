@@ -3,18 +3,25 @@
 <body>
     <app-nav-bar></app-nav-bar>
     <app-notification #notification></app-notification>
-    <br><br><br>
+    <br>
     <div class="BuyShoe">
         <div class="ShoeImage">
             <img src="{{shoe?.PicturePath}}">
+            <p class="ShoeTextDescription">
+                {{shoe === null || shoe.Description.length <=0 ?"( Липсва описание )" :shoe.Description}}
+            </p>
         </div>
 
         <div class="ShoeDescription">
             <p class="ShoeName">{{shoe?.Name}}</p>
-            <p class="ShoeGender">{{shoe?.getGenderDescription()}}</p>
+            <p class="ShoeGender">
+                {{shoe?.getGenderDescription()}} на {{shoe?.Brand}}
+            </p>
             <p class="ShoePrice">{{shoe?.Price}} лв.</p>
             <p class="SelectSize">Изберете размер:</p>
-            <p class="SizeButtons"><app-size-buttons [notification]="notification" [shoe]="shoe"></app-size-buttons></p>
+            <p class="SizeButtons">
+                <app-size-buttons [notification]="notification" [shoe]="shoe"></app-size-buttons>
+            </p>
         </div>
     </div>
     <app-footer-bar></app-footer-bar>

@@ -27,8 +27,20 @@ export class ShoeItem{
     private gender:Genders;
     private color:Colors;
     private sizes:string[];
+    private description:string;
+    private brand:string;
 
-    public constructor(id:number, name:string, price:number, picturePath:string, gender:Genders, color:Colors, sizes:string[]){
+    public constructor(
+        id:number,
+        name:string,
+        price:number,
+        picturePath:string,
+        gender:Genders,
+        color:Colors,
+        sizes:string[],
+        desciption:string,
+        brand:string
+        ){
         this.id = id;
         this.name = name;
         this.price = price;
@@ -36,6 +48,8 @@ export class ShoeItem{
         this.gender = gender;
         this.color = color;
         this.sizes = sizes;
+        this.description= desciption;
+        this.brand = brand;
     }
 
     public get Id():number{
@@ -64,6 +78,14 @@ export class ShoeItem{
 
     public get Color():Colors{
         return this.color;
+    }
+
+    public get Description():string{
+        return this.description;
+    }
+
+    public get Brand():string{
+        return this.brand;
     }
 
     public getGenderDescription():string{

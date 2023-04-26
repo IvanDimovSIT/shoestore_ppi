@@ -25,7 +25,9 @@ export class ShoppingCart {
                         item.shoeItem.picturePath,
                         item.shoeItem.gender,
                         item.shoeItem.color,
-                        item.shoeItem.sizes),
+                        item.shoeItem.sizes,
+                        item.shoeItem.description,
+                        item.shoeItem.brand),
                     item.shoeSize,
                     item.count));
             } catch (e) {

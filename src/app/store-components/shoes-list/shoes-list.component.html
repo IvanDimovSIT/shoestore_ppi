@@ -4,7 +4,7 @@
         <table class="ShoeFrame">
             <tr><td><img class="ShoeImage" src= "{{i.PicturePath}}" ></td></tr>
             <tr><td class="ShoeName"><p>{{i.Name}}</p></td></tr>
-            <tr><td class="ShoeGender"><p>{{i.getGenderDescription()}}</p></td></tr>
+            <tr><td class="ShoeGender"><p>{{i.getGenderDescription()}} {{i.Brand}}</p></td></tr>
             <tr><td class="ShoePrice"> <p> {{i.Price}} лв.
             <button class="BuyButton" (click)="buyShoe(i.Id)" >Купи</button>
             </p></td></tr>
