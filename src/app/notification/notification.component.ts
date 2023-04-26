@@ -8,10 +8,20 @@ import { Component, Input } from '@angular/core';
 export class NotificationComponent {
   @Input() message: string = "";
   public showNotification: boolean = false;
+  private activeNotification:number|null = null;
 
   public showMessage(): void {
-    this.showNotification = true;
-    setTimeout(() => {
+    if(this.showNotification == true && this.activeNotification !== null){
+      clearTimeout(this.activeNotification);
+      this.showNotification = false;
+
+      this.activeNotification = window.setTimeout(() => {
+        this.showNotification = true;
+      }, 50);
+    }else{
+      this.showNotification = true;
+    }
+    this.activeNotification = window.setTimeout(() => {
       this.showNotification = false;
     }, 3000);
   }
