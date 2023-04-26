@@ -24,15 +24,19 @@ export class SizeButtonsComponent {
   }
 
   public addToCart(){
-    if(this.selectedSize == null)
+    if(this.selectedSize == null){
+      this.showNotification("Изберете размер");
       return;
+    }
+      
 
     ShoppingCart.addById(this.shoe!.Id, this.selectedSize);
-    this.showNotification();
+    this.showNotification("Успешно добавено в количката!");
   }
 
-  private showNotification(): void {
-    console.log("Added to cart!");
+  private showNotification(message: string): void {
+    console.log(message);
+    this.notification.message = message;
     this.notification.showMessage();
   }
 
