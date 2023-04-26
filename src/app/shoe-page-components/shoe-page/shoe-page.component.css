@@ -32,6 +32,7 @@
     font-weight: bold;
     margin: 0;
     padding: 0;
+    padding-left: 50px;
 }
 
 .ShoeGender {
@@ -39,6 +40,7 @@
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
+    padding-left: 50px;
 }
 
 .ShoePrice {
@@ -46,6 +48,7 @@
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
+    padding-left: 50px;
 }
 
 .SelectSize{
@@ -53,4 +56,5 @@
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 40px;
     padding: 0;
+    text-align: center;
 }
