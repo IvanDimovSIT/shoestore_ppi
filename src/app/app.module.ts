@@ -36,6 +36,7 @@ import { PaymentPageComponent } from './payment-page/payment-page.component';
 import { TotalPriceService } from 'src/service/TotalPriceService';
 import { PaypalConfigService } from 'src/service/PaypalConfigService';
 import { NgxPayPalModule } from 'ngx-paypal';
+import { PrivacyPolicyPageComponent } from './information-pages/privacy-policy-page/privacy-policy-page.component';
 
 
 @NgModule({
@@ -66,7 +67,8 @@ import { NgxPayPalModule } from 'ngx-paypal';
     EditProfileFormComponent,
     NotificationComponent,
     PurchaseCompletePageComponent,
-    PaymentPageComponent
+    PaymentPageComponent,
+    PrivacyPolicyPageComponent
   ],
   imports: [
     BrowserAnimationsModule,

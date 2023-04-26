@@ -13,6 +13,7 @@ import { RegistrationPageComponent } from './registration-page-components/regist
 import { ProfilePageComponent } from './profile-page-components/profile-page/profile-page.component';
 import { PurchaseCompletePageComponent } from './purchase-complete-page/purchase-complete-page.component';
 import { PaymentPageComponent } from './payment-page/payment-page.component';
+import { PrivacyPolicyPageComponent } from './information-pages/privacy-policy-page/privacy-policy-page.component';
 
 // Routing between pages
 const routes: Routes = [
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: 'about-us', component: AboutUsPageComponent},
   { path: 'FAQ', component: FaqPageComponent},
   { path: 'contacts', component: ContactsPageComponent},
+  { path: 'privacy-policy', component: PrivacyPolicyPageComponent},
   { path: '**', component: StorePageComponent}
 ];
 
