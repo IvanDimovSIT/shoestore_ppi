@@ -3,6 +3,7 @@
     margin: auto;
     min-height: 100vh;
     margin-top: 100px;
+    margin-bottom: 50px;
 }
 
 p{
@@ -16,4 +17,18 @@ img{
     margin-left: auto;
     margin-right: auto;
     width: 30%;
+}
+
+.Answer{
+    margin: 20px; 
+}
+
+.Question{
+    font-weight: bold;
+}
+
+hr{
+    height: 1px;
+    background: linear-gradient(to right, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.8) 45%, rgba(0,0,0,0.8) 55%, rgba(0,0,0,0.2) 100%);
+    border: none;
 }
