@@ -3,30 +3,50 @@
     <div class="PriceFilter">
         <h4>Цена:</h4>
         <p>
-            <input type="radio" name="price" value="A" [checked]="price==='A'" (change)="filterChange('A', null)">
+            <input type="radio" name="price" value="A" [checked]="price==='A'" (change)="filterChange('A', null, null)">
             Без филтър
         </p>
 
         <p>
-            <input type="radio" name="price" value="0" [checked]="price==='0'" (change)="filterChange('0', null)">
+            <input type="radio" name="price" value="0" [checked]="price==='0'" (change)="filterChange('0', null, null)">
             0лв - 50лв
         </p>
 
         <p>
-            <input type="radio" name="price" value="50" [checked]="price==='50'" (change)="filterChange('50', null)">
+            <input type="radio" name="price" value="50" [checked]="price==='50'" (change)="filterChange('50', null, null)">
             50лв - 100лв
         </p>
 
         
         <p>
-            <input type="radio" name="price" value="100" [checked]="price==='100'" (change)="filterChange('100', null)">
+            <input type="radio" name="price" value="100" [checked]="price==='100'" (change)="filterChange('100', null, null)">
             100лв - 200лв
         </p>
 
         
         <p>
-            <input type="radio" name="price" value="200" [checked]="price==='200'" (change)="filterChange('200', null)">
+            <input type="radio" name="price" value="200" [checked]="price==='200'" (change)="filterChange('200', null, null)">
             200лв +
+        </p>
+    </div>
+
+    <div class="BrandFilter">
+        <h4>Марка:</h4>
+        <p>
+            <input type="radio" name="brand" value="A" [checked]="brand==='A'" (change)="filterChange(null, null,'A')">
+            Без филтър
+        </p>
+        <p>
+            <input type="radio" name="brand" value="Nike" [checked]="brand==='Nike'" (change)="filterChange(null, null,'Nike')">
+            Nike
+        </p>
+        <p>
+            <input type="radio" name="brand" value="Adidas" [checked]="brand==='Adidas'" (change)="filterChange(null, null,'Adidas')">
+            Adidas
+        </p>
+        <p>
+            <input type="radio" name="brand" value="Puma" [checked]="brand==='Puma'" (change)="filterChange(null, null,'Puma')">
+            Puma
         </p>
     </div>
 
@@ -34,63 +54,63 @@
         <h4>Цвят:</h4>
         <div class="ColorOptions">
         <p>
-            <input type="radio" name="color" value="A" [checked]="color === 'A'" (change)="filterChange(null, 'A')">
+            <input type="radio" name="color" value="A" [checked]="color === 'A'" (change)="filterChange(null, 'A', null)">
             Без филтър
         </p>
 
         <p>
-            <input type="radio" name="color" value="Black" [checked]="color === 'Black'" (change)="filterChange(null, 'Black')">
+            <input type="radio" name="color" value="Black" [checked]="color === 'Black'" (change)="filterChange(null, 'Black', null)">
             Черен
         </p>
 
         <p style="color: white; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">
-            <input type="radio" name="color" value="White" [checked]="color === 'White'" (change)="filterChange(null, 'White')">
+            <input type="radio" name="color" value="White" [checked]="color === 'White'" (change)="filterChange(null, 'White', null)">
             Бял
         </p>
 
 
         <p style="color: grey;">
-            <input type="radio" name="color" value="Grey" [checked]="color === 'Grey'" (change)="filterChange(null, 'Grey')">
+            <input type="radio" name="color" value="Grey" [checked]="color === 'Grey'" (change)="filterChange(null, 'Grey', null)">
             Сив
         </p>
 
         <p style="color:red">
-            <input type="radio" name="color" value="Red" [checked]="color === 'Red'" (change)="filterChange(null, 'Red')">
+            <input type="radio" name="color" value="Red" [checked]="color === 'Red'" (change)="filterChange(null, 'Red', null)">
             Червен
         </p>
 
         <p style="color: green;">
-            <input type="radio" name="color" value="Green" [checked]="color === 'Green'" (change)="filterChange(null, 'Green')">
+            <input type="radio" name="color" value="Green" [checked]="color === 'Green'" (change)="filterChange(null, 'Green', null)">
             Зелен
         </p>
 
         <p style="color: blue;">
-            <input type="radio" name="color" value="Blue" [checked]="color === 'Blue'" (change)="filterChange(null, 'Blue')">
+            <input type="radio" name="color" value="Blue" [checked]="color === 'Blue'" (change)="filterChange(null, 'Blue', null)">
             Син
         </p>
 
         <p style="color: orange;">
-            <input type="radio" name="color" value="Orange" [checked]="color === 'Orange'" (change)="filterChange(null, 'Orange')">
+            <input type="radio" name="color" value="Orange" [checked]="color === 'Orange'" (change)="filterChange(null, 'Orange', null)">
             Оранжев
         </p>
 
         <p style="color: brown;">
-            <input type="radio" name="color" value="Brown" [checked]="color === 'Brown'" (change)="filterChange(null, 'Brown')">
+            <input type="radio" name="color" value="Brown" [checked]="color === 'Brown'" (change)="filterChange(null, 'Brown', null)">
             Кафяв
         </p>
 
         <p style="color: rgb(207, 88, 108);">
-            <input type="radio" name="color" value="Pink" [checked]="color === 'Pink'" (change)="filterChange(null, 'Pink')">
+            <input type="radio" name="color" value="Pink" [checked]="color === 'Pink'" (change)="filterChange(null, 'Pink', null)">
             Розов
         </p>
 
         <p style="color:rgb(177, 177, 19)">
-            <input type="radio" name="color" value="Yellow" [checked]="color === 'Yellow'" (change)="filterChange(null, 'Yellow')">
+            <input type="radio" name="color" value="Yellow" [checked]="color === 'Yellow'" (change)="filterChange(null, 'Yellow', null)">
             Жълт
         </p>
 
         <p>
-            <input type="radio" name="color" value="MultiColor" [checked]="color === 'MultiColor'" (change)="filterChange(null, 'MultiColor')">
+            <input type="radio" name="color" value="MultiColor" [checked]="color === 'MultiColor'" (change)="filterChange(null, 'MultiColor', null)">
             Комбиниран
         </p>
 

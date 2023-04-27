@@ -11,31 +11,29 @@ export class ShoeFiltersComponent {
   public showFilters: boolean = false; 
   public price: string = "A";
   public color: string = "A";
+  public brand: string = "A";
 
   public constructor(private router: Router, private route: ActivatedRoute) {
-    const price = this.route.snapshot.paramMap.get('price');
-    if(price !== null)
-      this.price = price;
-    
-    const color = this.route.snapshot.paramMap.get('color');
-    if(color !== null)
-      this.color = color;
+    this.readPathVariables();
   }
 
   public ngOnInit() {
-    console.log("From Path: Price:", this.price, " Color:", this.color);
+    console.log("From Path: Price:", this.price, " Color:", this.color, " Brand:", this.brand);
   }
 
-  public filterChange(price:string|null, color:string|null){
+  public filterChange(price:string|null, color:string|null, brand:string|null){
     this.router.navigate(
-      ['/store',  this.route.snapshot.paramMap.get('g'),
-      '1',
-      price===null?this.route.snapshot.paramMap.get('price'):price,
-      color===null?this.route.snapshot.paramMap.get('color'):color],
+      ["/store",  this.route.snapshot.paramMap.get("g"),
+      "1",
+      brand===null?this.route.snapshot.paramMap.get("brand"):brand,
+      price===null?this.route.snapshot.paramMap.get("price"):price,
+      color===null?this.route.snapshot.paramMap.get("color"):color],
       { replaceUrl: true });
   }
 
   public toggle(event:any){
+    this.readPathVariables();
+    console.log("Shoe filters:",this);
     const element = event.target;
     if (element.classList.contains('InactiveFilter')) {
       element.classList.remove('InactiveFilter');
@@ -46,6 +44,29 @@ export class ShoeFiltersComponent {
     }
 
     this.showFilters = !this.showFilters;
+  }
+
+  private readPathVariables(){
+    const price:string|null = this.route.snapshot.paramMap.get("price");
+    if(price !== null){
+      this.price = price;
+    }else{
+      this.price = "A";
+    }
+
+    const color:string|null = this.route.snapshot.paramMap.get("color");
+    if(color !== null){
+      this.color = color;
+    }else{
+      this.color = "A";
+    }
+  
+    const brand:string|null = this.route.snapshot.paramMap.get("brand");
+    if(brand !== null){
+      this.brand = brand;
+    }else{
+      this.brand = "A";
+    }
   }
 
 }

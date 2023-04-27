@@ -37,7 +37,8 @@ export class NavBarComponent {
   public navigateStore(gender: string){
     console.log("navigating to:", gender);
     this.router.navigate(
-      ['/store', gender, '1', 
+      ['/store', gender, '1',
+      this.route.snapshot.paramMap.get('brand')===null?'A':this.route.snapshot.paramMap.get('brand'), 
       this.route.snapshot.paramMap.get('price')===null?'A':this.route.snapshot.paramMap.get('price'),
       this.route.snapshot.paramMap.get('color')===null?'A':this.route.snapshot.paramMap.get('color')],
       { replaceUrl: true });

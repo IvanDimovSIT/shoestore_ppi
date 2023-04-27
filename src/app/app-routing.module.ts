@@ -17,9 +17,9 @@ import { PrivacyPolicyPageComponent } from './information-pages/privacy-policy-p
 
 // Routing between pages
 const routes: Routes = [
-  { path: '', redirectTo: '/store/A/1/A/A', pathMatch: 'full' },
+  { path: '', redirectTo: '/store/A/1/A/A/A', pathMatch: 'full' },
   { path: 'shoe-page/:id', component: ShoePageComponent }, 
-  { path: 'store/:g/:p/:price/:color', component: StorePageComponent}, //use path variables
+  { path: 'store/:g/:p/:brand/:price/:color', component: StorePageComponent}, //use path variables
   { path: 'cart', component: CartPageComponent},
   { path: 'checkout', component: CheckoutPageComponent},
   { path: 'purchase-complete', component: PurchaseCompletePageComponent},

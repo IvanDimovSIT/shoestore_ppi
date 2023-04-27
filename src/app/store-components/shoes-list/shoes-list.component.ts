@@ -16,17 +16,19 @@ export class ShoesListComponent {
   public gender:string = 'A';
   public maxPage:number=1;
 
-  constructor(private routerConnection: Router, private activatedRoute: ActivatedRoute) { 
+  public constructor(private routerConnection: Router, private activatedRoute: ActivatedRoute) { 
     let g:string|null = null;
     let p:string|null = null;
     let price:string|null = null;
     let color:string|null = null;
+    let brand:string|null = null;
 
     this.activatedRoute.paramMap.subscribe(params => {
       g = params.get('g');
       p = params.get('p');
       price = params.get('price');
       color = params.get('color');
+      brand = params.get('brand');
 
       if(price === null){
         price = 'A';
@@ -34,6 +36,10 @@ export class ShoesListComponent {
 
       if(color === null){
         color = 'A';
+      }
+
+      if(brand === null){
+        brand = 'A';
       }
 
       if(g === null || g === 'a'){
@@ -74,6 +80,7 @@ export class ShoesListComponent {
       }
 
       this.filterByColor(color);
+      this.filterByBrand(brand);
 
       //Pages
       this.maxPage = Math.floor( 1+(this.displayedShoes!.size/ShoesListComponent.ITEMS_PER_PAGE));
@@ -98,7 +105,7 @@ export class ShoesListComponent {
     });
   }
 
-  public filterByColor(colorString: string){
+  private filterByColor(colorString: string){
     if(colorString === 'A')
       return;
     const color:Colors = Colors[colorString as keyof typeof Colors];
@@ -110,9 +117,16 @@ export class ShoesListComponent {
     
   }
 
-  public filterByPrice(startPrice:number, endPrice: number){
+  private filterByPrice(startPrice:number, endPrice: number){
     const displayedShoesArray:[number,ShoeItem][] = Array.from(this.displayedShoes!.entries());
     this.displayedShoes = new Map(displayedShoesArray.filter(shoe => shoe[1].Price >= startPrice && shoe[1].Price <= endPrice));
+  }
+
+  private filterByBrand(brand:string){
+    if(brand === 'A')
+      return;
+    const displayedShoesArray:[number,ShoeItem][] = Array.from(this.displayedShoes!.entries());
+    this.displayedShoes = new Map(displayedShoesArray.filter(shoe => shoe[1].Brand == brand));
   }
 
   public loadAll(){

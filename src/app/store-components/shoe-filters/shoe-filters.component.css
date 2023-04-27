@@ -52,14 +52,20 @@ input[type="radio"]:hover {
 }
 
 .PriceFilter{
-    width: 30%;
+    width: 20%;
+}
+
+.BrandFilter{
+    width: 20%;
 }
 
 .ColorFilter{
-    width: 70%;
+    width: 60%;
 }
 
 .ColorOptions{
+    margin: 0;
+    padding: 0;
     display: grid;
     grid-row-gap: 0;
     grid-template-columns: repeat(3, 1fr);
