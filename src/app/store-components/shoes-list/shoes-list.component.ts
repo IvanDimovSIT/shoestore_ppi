@@ -82,27 +82,30 @@ export class ShoesListComponent {
       this.filterByColor(color);
       this.filterByBrand(brand);
 
-      //Pages
-      this.maxPage = Math.floor( 1+(this.displayedShoes!.size/ShoesListComponent.ITEMS_PER_PAGE));
-
-      if(p !== null){
-        const page:number = Number.parseInt(p);
-        if(Number.isNaN(page))return;
-        if(page<1)return;
-        
-        if(page>this.maxPage){
-          this.pageNumber = this.maxPage;
-        }else{
-          this.pageNumber = page;
-        }
-      }
-
-      const displayedShoesArray:[number,ShoeItem][] = Array.from(this.displayedShoes!.entries());
-      const startIndex:number = Math.min((this.pageNumber-1)*ShoesListComponent.ITEMS_PER_PAGE, displayedShoesArray.length - 1);
-      const endIndex:number = Math.min(this.pageNumber*ShoesListComponent.ITEMS_PER_PAGE - 1, displayedShoesArray.length - 1);
-      this.displayedShoes = new Map(displayedShoesArray.slice(startIndex, endIndex + 1));
-      
+      this.findItemsOnPage(p);
     });
+  }
+
+  
+  private findItemsOnPage(pageString: string|null){
+    this.maxPage = Math.floor( 1+(this.displayedShoes!.size/ShoesListComponent.ITEMS_PER_PAGE));
+
+    if(pageString !== null){
+      const page:number = Number.parseInt(pageString);
+      if(Number.isNaN(page))return;
+      if(page<1)return;
+      
+      if(page>this.maxPage){
+        this.pageNumber = this.maxPage;
+      }else{
+        this.pageNumber = page;
+      }
+    }
+
+    const displayedShoesArray:[number,ShoeItem][] = Array.from(this.displayedShoes!.entries());
+    const startIndex:number = Math.min((this.pageNumber-1)*ShoesListComponent.ITEMS_PER_PAGE, displayedShoesArray.length - 1);
+    const endIndex:number = Math.min(this.pageNumber*ShoesListComponent.ITEMS_PER_PAGE - 1, displayedShoesArray.length - 1);
+    this.displayedShoes = new Map(displayedShoesArray.slice(startIndex, endIndex + 1));
   }
 
   private filterByColor(colorString: string){
@@ -162,6 +165,7 @@ export class ShoesListComponent {
       ['/store',
       this.gender,
       pageNumber,
+      this.activatedRoute.snapshot.paramMap.get('brand'),
       this.activatedRoute.snapshot.paramMap.get('price'),
       this.activatedRoute.snapshot.paramMap.get('color') ],
       { replaceUrl: true });
