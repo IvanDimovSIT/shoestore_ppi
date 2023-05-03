@@ -40,15 +40,6 @@
 
 }
 
-/*
-SshoesList{
-    display: flex;
-    flex-wrap: wrap;
-    padding-left: 0;
-    justify-content: center;
-    margin: auto;
-}*/
-
 .ShoesItem{
     margin: auto;
     padding: 0.5%;
@@ -56,6 +47,12 @@ SshoesList{
     /*flex: 0 0 33.333333%;*/
     display: inline;
     float: left;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .ShoeImage{
@@ -130,4 +127,9 @@ SshoesList{
     border-radius: 15px;
     border: 2px solid black;
     text-align: center;
+}
+
+.ShoeName p{
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
