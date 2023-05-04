@@ -40,6 +40,12 @@
 
 }
 
+.ShoesList{
+    width: 100%;
+    position: relative;
+    left: 100px;
+}
+
 .ShoesItem{
     margin: auto;
     padding: 0.5%;
@@ -47,12 +53,6 @@
     /*flex: 0 0 33.333333%;*/
     display: inline;
     float: left;
-}
-
-ul{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
 }
 
 .ShoeImage{
@@ -65,6 +65,8 @@ ul{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .BuyButton{
@@ -130,6 +132,15 @@ ul{
 }
 
 .ShoeName p{
+    margin-top: 0;
+    padding-top: 0;
     margin-bottom: 0;
     padding-bottom: 0;
 }
+
+.ShoeGender p{
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+
